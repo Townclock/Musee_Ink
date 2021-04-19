@@ -1,0 +1,40 @@
+=== grandSalond_stories ===
+<- travel_actions()
+
+The museum opens up before you to reveal a cathedral-like space. Skylights pierce the barrel vaulted ceiling. You imagine long-ago trains belching steam and smoke where now there is lightness and air. 
++ (grandSalon_play) { !grandSalon_play} [Play on the river]
+Before you, Carpeaux's "The Four Parts of the World" holds up the world in neoclassical bronze spendor. You feel inspired.
+    + + [Circle the sculpture and ponder the four figures in bronze.] 
+        You gaze at the rippling muscles and the goddess-like figures.
+    + + [Read the plaque.]
+        Jean-baptiste Carpeaux (1827-1875), The Four Parts of the World Holding the Celestial Sphere, circa 1872.
+    - - Oh, it's plaster. I wouldn't have guessed. Sad, he died before it could be cast in bronze.
+
++ (grandSalon_build) { grandSalon_play && !(grandSalon_build || grandSalon_rest) } [Build on the river]
+Peering down the Grand Salon, you see other great scultures, and wonder, if they too are plaster, not bronze, not marble.
+    + + [Investigate]
+        Here is another Carpeaux: Ugolino, and cast in bronze.
+    + + [Leave the scupture gallery. There's so much to see!]
+        There are other works to explore, and you are curious about the marble tiger in the distance.
++ (grandSalon_rest) { grandSalon_play && !(grandSalon_build || grandSalon_rest) } [Rest in the grandSalon]
+Taking a break from the stress of your overworked life, you rest by the river. The healing gurgle of the water and warm rays of the sun are like balm to your soul. 
+
+- -> grandSalond_stories
+-> DONE
+
+=== serpent_charmer_stories ===
+<- travel_actions()
+
+ 
++ (find_docent) {!find_docent} [Find a guide.]
+You are transfixed by the dark figure of the snake charmer, and you wonder was she a real person...or was she imagined by Rousseah in her Garden in Africa. How shocking for the audiences in La Belle Époque to see Eve, as black as onyx staring back at them. You hardly notice the woman standing quietly besire you, until she speaks. 
+
+"She is my Mother..." she says quietly. You turn to her, and the resemblence is striking: long flowing black hair, dark skin, and piercing eyes.
+
+What do you reply?
+        ++ She is all our mothers. She is Eve.
+        ++ What ever do you mean? Was she real?
+        ++ You say nothing, and walk away.
+
+- -> serpent_charmer_stories
+-> DONE

@@ -1,0 +1,2 @@
+== function CanTravel(goto_loc) ==
+~return locationsAvailable ? goto_loc && currentLocation != goto_loc

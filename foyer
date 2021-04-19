@@ -1,0 +1,23 @@
+=== foyer_stories ===
+<- travel_actions()
+
+The patrons queue in quiet reverance, still two meters apart. They have reserved their tickets in advance. You marvel that you are among the first visitors to go inside in over a year.
++ {foyer_stories} [Enter the Museum.]
+  The receptionist, unmistakably Parisienne, greets you warmly.
+  
+  "Bien venue a la Musée. Avez-vous billets?"
+  
+    * *  "Yes, I made them online."
+        She raises a bar code scanner and beckons you to approach. Beep. "You may enter. Please take a map. It will help guide you on your journey."
+        ~ locationsAvailable += rousseau
+        ~ locationsAvailable += moreau
+        -> moreau_stories
+    * *  "No, I was hoping to enter without them." 
+        "She disapproves, as only a French woman of a certain age can. "I am sorry, we are limited to only those with ticketed reservations."
+        ~ locationsAvailable += foyer
+    + + ->
+        There are no reservations available for today.
+        -> museum_stories
+
+- ->museum_stories
+->DONE
