@@ -1,32 +1,37 @@
 
 == the_chimeras == //== Les_Chimères == 
 
- ->moreau_stories
+The chimeras
+
+->->
 
 == oedipus ==
 
- ->moreau_stories
+->->
 
 == fontaine == 
 
 
- ->moreau_stories
+->->
 
 === moreau_stories ===
-/*    ~ currentLocation = moreau
-You stand within the a room with three paintings arranged in a triangle.
+~ currentLocation = moreau
 
-    <- travel_actions()
-    *The Paintings:
-       ** Les_Chimères
-        -> the_chimeras
-      ** Oedipus and the Sphinx
-        -> oedipus
-    
-      ** {!fontaine}a woman on a gryphon 
-        -> fontaine
-      ** {fontaine}Fables of Fontain 
-        -> fontaine
-    - ->moreau_stories
-    -> DONE*/
+  
+ 
+ <- paintings
+ <- travel_actions
+ - ->DONE
+ 
+ 
+ =paintings
+ + The Chimeras
+    -> the_chimeras ->
+ + Oedipus and the Sphinx
+    -> oedipus ->
+ + Fontaine's Fables
+    -> fontaine ->
+- That was a nice painting
+    -> moreau_stories
+
 -> DONE

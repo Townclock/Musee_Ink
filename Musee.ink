@@ -4,6 +4,8 @@ INCLUDE moreau
 INCLUDE rousseau
 INCLUDE cafateria
 INCLUDE functions
+INCLUDE rousseauPaintings
+
 
 // Headspace
 LIST hunger = notHungry, hungry, famished
@@ -33,15 +35,31 @@ LIST manWithCane = notMet, hasSharedRiddle, exposed
 LIST locations = outside, foyer, rousseau, moreau, cafateria
 VAR locationsAvailable = (foyer)
 VAR currentLocation = outside
+-> debug
+=== debug ===
++surprise
+-> surpise ->
++repast
+-> repast ->
++snakecharmer
+-> snakecharmer ->
++oedipus
+-> oedipus ->
++chimeras
+-> the_chimeras ->
++fontaine
+-> fontaine ->
 
-
++ let me play
 -> museum_stories
+- -> debug
+
 
 // Travel menu
 === travel_actions() ===
 Current Location: {currentLocation}
 
-+ {CanTravel(foyer)} [Enter the Foyer]
++ {CanTravel(foyer) } [Enter the Foyer]
   People are excited that the museum has reopened...
   ~currentLocation = foyer
   -> foyer_stories
