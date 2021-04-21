@@ -1,2 +1,12 @@
 == function CanTravel(goto_loc) ==
 ~return locationsAvailable ? goto_loc && currentLocation != goto_loc
+
+== function formatTime(t) ==
+~ temp hours = 1 + t / 60
+~ temp minutes = t % 60
+{minutes >= 10:
+~ return hours + ":" + minutes
+- else:
+~ return hours + ":0" + minutes
+
+} 

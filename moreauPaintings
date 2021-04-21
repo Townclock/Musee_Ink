@@ -2,8 +2,7 @@
 //LIST themes = slithering, creation, temptation, paradise
 
 Les Chimères
-
-You examine the painting:
+Gustave Moreau
 
 It's a large and unfinished forest scene. There's a lot of detail, but it's difficult to make out from afar... #InkGallery: Chimera
     -> the_chimeras_options
@@ -12,42 +11,27 @@ It's a large and unfinished forest scene. There's a lot of detail, but it's diff
 * (A) [Lean in to scan the image.]
     You lean in and realize that the forest contains dozens of nude women <i>lounging</i> amongst creatures as if unaware of the impending danger. #InkGallery: Chimera
         ** [Zoom into the center.]
-        Your eyes dart toward the center where you spot a woman confidently riding on a winged chimera in complete control of her destiny. Her gusto rubs off on you{B: and, somehow, all the fear immediately exist your body}.
-        ~flying++
-        ~fear=confident
-        -> leave_fear
+        Your eyes dart toward the center where you spot a woman confidently riding on a winged chimera in complete control of her destiny. Her gusto rubs off on you{B: and, somehow, all the fear immediately exits your body}.
+        <- flyingBeasts
+        ~fear--
+        Still feeling {dream}, but now {fear}, you decide to turn your attention elsewhere. #InkGallery: Les Chimères leave_fear
+
         ** [Zoom into the bottom.]
         Your eyes dart toward the bottom where you spot a few women dreamily staring off into the distance. Although a serpent creeps among them, they remain calm.
         <- creepingBeasts
         ~fear--
         {
             - B:
-                -> leave_both
+                Now feeling {fear} and {dream}, you decide to turn your attention elsewhere. #InkGallery: Les Chimères leave_both
             - else:
-                -> leave_dream
+                Still feeling {fear}, but now {dream}, you decide to turn your attention elsewhere. #InkGallery: Les Chimères leave_dream
         }
 * (B) Why is it unfinished? #InkGallery: Chimera B
     Moreau abandoned the work shortly after his mother's passing to work on a much darker piece that dipicts the fact that DEATH is coming for us all.
-    ~fear=terrified
+    ~fear++ // terrifiend as a state that will let the player flee the museum 
     -> the_chimeras_options
-
-=leave_fear
-Still feeling {dream}, but now {fear}, you decide to turn your attention elsewhere.
-#InkGallery: Les Chimères leave_fear
-->->
-
-//TODO: make sure fear values all use the same form of words (so that they always work in sentences), right now "dreading" does not fit
-// CASS: updated dreading to dread, that makes sense
-
-=leave_dream
-Still feeling {fear}, but now {dream}, you decide to turn your attention elsewhere.
-#InkGallery: Les Chimères leave_dream
-->->
-
-=leave_both
-Now feeling {fear} and {dream}, you decide to turn your attention elsewhere.
-#InkGallery: Les Chimères leave_both
-->->
++ ->->
+- ->->
 
  === fontaine ===
  ->->

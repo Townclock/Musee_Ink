@@ -1,4 +1,4 @@
-=== grandSalond_stories ===
+=== rousseau_stories ===
 <- travel_actions()
 
 The museum opens up before you to reveal a cathedral-like space. Skylights pierce the barrel vaulted ceiling. You imagine long-ago trains belching steam and smoke where now there is lightness and air. 
@@ -19,7 +19,7 @@ Peering down the Grand Salon, you see other great scultures, and wonder, if they
 + (grandSalon_rest) { grandSalon_play && !(grandSalon_build || grandSalon_rest) } [Rest in the grandSalon]
 Taking a break from the stress of your overworked life, you rest by the river. The healing gurgle of the water and warm rays of the sun are like balm to your soul. 
 
-- -> grandSalond_stories
+- -> rousseau_stories
 -> DONE
 
 === serpent_charmer_stories ===

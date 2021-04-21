@@ -11,11 +11,17 @@
  
  
  =paintings
- + The Chimeras
+ * A piece that looks unfinished. . .
     -> the_chimeras ->
- + Oedipus and the Sphinx
+ + {the_chimeras}Les Chimères
+    -> the_chimeras ->
+ * A confrontation . . .
     -> oedipus ->
- + Fontaine's Fables
+ + {oedipus}Oedipus and the Sphinx
+    -> oedipus ->
+ * A figure in the clouds. . .
+    -> fontaine ->
+ +{fontaine}Fontaine's Fables
     -> fontaine ->
 - That was a nice painting
     -> moreau_stories

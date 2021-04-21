@@ -1,23 +1,41 @@
-=== foyer_stories ===
-<- travel_actions()
+VAR receptionist = "The receptionist"
 
-The patrons queue in quiet reverance, still two meters apart. They have reserved their tickets in advance. You marvel that you are among the first visitors to go inside in over a year.
-+ {foyer_stories} [Enter the Museum.]
+=== foyer_stories ===
+
+{!foyer_stories:The patrons queue in quiet reverance, still two meters apart. They have reserved their tickets in advance. You marvel that you are among the first visitors to go inside in over a year.}
+
+* {foyer_stories} [Talk to the receptionist]
   The receptionist, unmistakably Parisienne, greets you warmly.
   
   "Bien venue a la Musée. Avez-vous billets?"
   
-    * *  "Yes, I made them online."
-        She raises a bar code scanner and beckons you to approach. Beep. "You may enter. Please take a map. It will help guide you on your journey."
+    **  (email)"Yes, I have this email."
+        She raises a bar code scanner and beckons you to approach. Beep. A small machine on the desk prints out a sticker. She {nametag:picks up the pamphlet on the desk}{nametag == 0:grabs a pamphlet} and places the sticker on the back. 
+        "This is your pass for the day. It's got a map inside, but the place is small so you might not need it."
+        ~items += pamphlet
         ~ locationsAvailable += rousseau
         ~ locationsAvailable += moreau
-        -> moreau_stories
-    * *  "No, I was hoping to enter without them." 
-        "She disapproves, as only a French woman of a certain age can. "I am sorry, we are limited to only those with ticketed reservations."
-        ~ locationsAvailable += foyer
+        -> foyer_stories
+    ** (nametag)Her nametag. . .
+        You take a look at her chest and examine the nametage she is wearing. "Freya" it says. That's not a very French name.
+        "I'm sorry honey. I can't do this. I'll wait for you in the foyer." An older woman steps up to the receptionist and places a pamphlet on the desk. She smiles at you on her way to the way bench by the foyer entrance. ~items += riddlecard
+        Freya looks like she is about to say something and then gives up. 
+        "I'm sorry about that." She says. "Ticket?" ~receptionist="Freya"
+        ~items += riddleCard
+        * Show email.
+        -> email
+   // * *  "No, I was hoping to enter without them." 
+   //     "She disapproves, as only a French woman of a certain age can. "I am sorry, we are limited to only those with ticketed reservations."
+    //        -> foyer_stories NO need for this branch because it deadends and doesn't express anything
     + + ->
         There are no reservations available for today.
-        -> museum_stories
+        -> foyer_stories
+    * ->
+    
+    {receptionist} is continuing to busily process entries for the museum.
+    
+<- travel_actions()
 
-- ->museum_stories
+
+- ->foyer_stories
 ->DONE

@@ -8,15 +8,19 @@ INCLUDE rousseauPaintings
 INCLUDE inventory
 INCLUDE beastInserts
 INCLUDE debug
+INCLUDE travel
 
 
 
-//Minutes since noon
+
+
+//Minutes since 1PM
 VAR time = 0
 
 // Headspace
-LIST hunger = notHungry, hungry, famished
-~hunger = notHungry
+LIST hunger = satisfied, peckish, famished
+~hunger = satisfied
+
 LIST dream = grounded, uncanny, delirious
 ~dream = grounded
 LIST fear = confident, unsettled, dread, terrified
@@ -31,36 +35,30 @@ VAR flying = 0
 LIST themes = mystery, death, riddles, fables, chimera, eve, creation, temptation, paradise
 VAR presentThemes = (mystery)
 
-// NPC Progress
-LIST manWithCane = notMet, hasSharedRiddle, exposed
-~manWithCane = notMet
-
 // Locations
 LIST locations = outside, foyer, rousseau, moreau, cafateria
 VAR locationsAvailable = (foyer)
 VAR currentLocation = outside
--> debug
-// Travel menu
-=== travel_actions() ===
-Current Location: {currentLocation}
 
-+ {CanTravel(foyer) } [Enter the Foyer]
-  People are excited that the museum has reopened...
-  ~currentLocation = foyer
-  -> foyer_stories
-+ {CanTravel(moreau)} [Gustave Moreau Collection]
-  Ah, the Grand Salon, with its cathedral-like ceilings and sculptures is an inspiring, quiet and contemplative space.
-  ~currentLocation = moreau
-  ->moreau_stories
-+ {CanTravel(rousseau)} [Henri Rousseau Collection]
-  Gallery One is a favourite. The post-impressionist Rousseau's "La Charmeuse de Serpents" dominates the room. Toulouse-Lautrec's Moulin Rouge works occupy and brighten the far corner. A small crowd gathers to ponder the black Eve in her garden of Eden.
-  ~currentLocation = rousseau
-  -> serpent_charmer_stories
+// State Machines and vars for "quest" progress
+LIST wrongName = ignorant, pamphletHasWrongName, pamphletInvestigated
+~wrongName = ignorant
+LIST Loki = recievedRiddle, mayGuess, recommendedToLeave
+
+-> debug
+
+ 
+ 
  
 // Same story world as Storylet_Example_In_Ink just done directly in Ink
 === museum_stories ===
-The Musée d"Orsay. They say there's no place like it. 
+//The Musée d"Orsay. They say there's no place like it. 
+The sun shines brightly upon the noisy city street. For the past week you've been exploring galleries all across Paris, taking in the sights and smells of the city, and generally having a good time. 
+
+You'd recieved an email informing you that you've won a contest and have a reservation to visit this particular gallery today. The event seems small, but oftentimes that's for the best. 
+
 <- travel_actions()
+
 ->DONE
 
 
