@@ -2,17 +2,24 @@
 INCLUDE foyer
 INCLUDE moreau
 INCLUDE rousseau
-INCLUDE cafateria
+INCLUDE moreauPaintings
 INCLUDE functions
 INCLUDE rousseauPaintings
+INCLUDE inventory
+INCLUDE beastInserts
+INCLUDE debug
 
+
+
+//Minutes since noon
+VAR time = 0
 
 // Headspace
 LIST hunger = notHungry, hungry, famished
 ~hunger = notHungry
 LIST dream = grounded, uncanny, delirious
 ~dream = grounded
-LIST fear = confident, unsettled, dreading, terrified
+LIST fear = confident, unsettled, dread, terrified
 ~fear = unsettled
 
 // Beasts
@@ -20,12 +27,9 @@ VAR creeping = 0
 VAR devouring = 0
 VAR flying = 0
 
-// Specific Thems
-VAR eve = false
-VAR chimera = false
-VAR fables = false
-VAR riddles = false
-VAR death = false
+// Specific Themes
+LIST themes = mystery, death, riddles, fables, chimera, eve, creation, temptation, paradise
+VAR presentThemes = (mystery)
 
 // NPC Progress
 LIST manWithCane = notMet, hasSharedRiddle, exposed
@@ -35,25 +39,6 @@ LIST manWithCane = notMet, hasSharedRiddle, exposed
 LIST locations = outside, foyer, rousseau, moreau, cafateria
 VAR locationsAvailable = (foyer)
 VAR currentLocation = outside
--> debug
-=== debug ===
-+surprise
--> surpise ->
-+repast
--> repast ->
-+snakecharmer
--> snakecharmer ->
-+oedipus
--> oedipus ->
-+chimeras
--> the_chimeras ->
-+fontaine
--> fontaine ->
-
-+ let me play
--> museum_stories
-- -> debug
-
 
 // Travel menu
 === travel_actions() ===

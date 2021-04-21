@@ -1,0 +1,28 @@
+=== debug ===
++surprise
+#InkGallery: Surprise
+-> surpise ->
++repast
+#InkGallery: Lion
+-> repast ->
++snakecharmer
+#InkGallery: SnakeCharmer
+-> snakecharmer ->
++oedipus
+#InkGallery: Oedipus
+++ urn
+    This is an urn # InkGallery: Oedipus Urn
+++ snake
+    This is an snake # InkGallery: Oedipus Snake
+
+-> oedipus ->
++chimeras
+#InkGallery: Chimeras
+-> the_chimeras ->
++fontaine
+#InkGallery: Fontaine
+-> fontaine ->
+
++ let me play
+-> museum_stories
+- -> debug

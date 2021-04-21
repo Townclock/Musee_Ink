@@ -1,11 +1,11 @@
 === the_chimeras ===
-LIST themes = slithering, creation, temptation, paradise
+//LIST themes = slithering, creation, temptation, paradise
 
 Les Chimères
 
 You examine the painting:
 
-It's a large and unfinished forest scene. There's a lot of detail, but it's difficult to make out from afar... #InkGallery: Chimeras
+It's a large and unfinished forest scene. There's a lot of detail, but it's difficult to make out from afar... #InkGallery: Chimera
     -> the_chimeras_options
 
 === the_chimeras_options ===
@@ -18,7 +18,7 @@ It's a large and unfinished forest scene. There's a lot of detail, but it's diff
         -> leave_fear
         ** [Zoom into the bottom.]
         Your eyes dart toward the bottom where you spot a few women dreamily staring off into the distance. Although a serpent creeps among them, they remain calm.
-        ~creeping++
+        <- creepingBeasts
         ~fear--
         {
             - B:
@@ -26,7 +26,7 @@ It's a large and unfinished forest scene. There's a lot of detail, but it's diff
             - else:
                 -> leave_dream
         }
-* (B) Why is it unfinished? #InkGallery: Les Chimères B
+* (B) Why is it unfinished? #InkGallery: Chimera B
     Moreau abandoned the work shortly after his mother's passing to work on a much darker piece that dipicts the fact that DEATH is coming for us all.
     ~fear=terrified
     -> the_chimeras_options
@@ -36,7 +36,9 @@ Still feeling {dream}, but now {fear}, you decide to turn your attention elsewhe
 #InkGallery: Les Chimères leave_fear
 ->->
 
-TODO: make sure fear values all use the same form of words (so that they always work in sentences), right now "dreading" does not fit
+//TODO: make sure fear values all use the same form of words (so that they always work in sentences), right now "dreading" does not fit
+// CASS: updated dreading to dread, that makes sense
+
 =leave_dream
 Still feeling {fear}, but now {dream}, you decide to turn your attention elsewhere.
 #InkGallery: Les Chimères leave_dream
@@ -47,14 +49,8 @@ Now feeling {fear} and {dream}, you decide to turn your attention elsewhere.
 #InkGallery: Les Chimères leave_both
 ->->
 
-// === fontaine ===
+ === fontaine ===
+ ->->
 
-
-
-// ->->
-
-// === oedipus ===
-
-
-
-// ->->
+ === oedipus ===
+ ->->
