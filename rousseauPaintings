@@ -6,8 +6,32 @@
 
 === repast ===
 
+The Repast of the Lion
 
+You examine the painting:
 
+Lush greenery, colorful flowers, and a calm sunset all frame a lion – feasting on a leopard as he stares back at you.
+-> repast_options
+
+=repast_options
++ (A) Look closely at the greenery
+{The vegetation is quite healthy, flawless in fact. You imagine the leaves swaying in a relaxing summer breeze.|The vegetation continues to sway in the breeze.|What else is there to see?}
+-> repast_options
++ (B) Look closely at the flowers
+{The flowers are bountiful and vibrant. They {A:too } have a peaceful quality about them.|The flowers patiently wait for you to follow their direction.|What else is there to see?}
+-> repast_options
++ (C) Look closely at the sunset
+{While this beast falls from the sky, another rises on land.|Soon it will be dark.|What else is there to see?}
+-> repast_options
+* (D) {A && B && C} Look closely at the lion
+Your gaze <i>finally</i> meets the lion's. "Has he been watching me this whole time?" you wonder. Blood oozes from his mouth as his stare remains unbroken.
+    ~fear++
+->repast_leave
+
+=repast_leave
+\*Gulp\*
+
+*Perhaps you should hurry along.
 ->->
 
 === snakecharmer ===
