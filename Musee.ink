@@ -39,7 +39,7 @@ LIST manWithCane = notMet, hasSharedRiddle, exposed
 LIST locations = outside, foyer, rousseau, moreau, cafateria
 VAR locationsAvailable = (foyer)
 VAR currentLocation = outside
-
+-> debug
 // Travel menu
 === travel_actions() ===
 Current Location: {currentLocation}
