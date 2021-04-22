@@ -2,7 +2,9 @@ let images =
     {
         "SnakeCharmer": {
             features : {
-
+                "Trees" : {x: 820, y: 0, width: 1755, height: 900},
+                "Birds" : {x: 1420, y: 0, width: 1255, height: 750},
+                "Sky" : {x: 0, y: 0, width: 880, height: 945},
             },
             width: 3556,
             height:3147,
