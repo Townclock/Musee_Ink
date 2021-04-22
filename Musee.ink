@@ -9,6 +9,13 @@ INCLUDE inventory
 INCLUDE beastInserts
 INCLUDE debug
 INCLUDE travel
+INCLUDE cafeteria
+INCLUDE Loki
+INCLUDE naming
+
+
+
+
 
 
 
@@ -32,18 +39,19 @@ VAR devouring = 0
 VAR flying = 0
 
 // Specific Themes
-LIST themes = mystery, death, riddles, fables, chimera, eve, creation, temptation, paradise
-VAR presentThemes = (mystery)
+LIST possibleThemes = mystery, death, riddles, fables, chimera, eve, creation, temptation, paradise, ridingBeasts, treeSnake
+VAR themes = (mystery)
 
 // Locations
-LIST locations = outside, foyer, rousseau, moreau, cafateria
+LIST locations = outside, foyer, rousseau, moreau, cafeteria
 VAR locationsAvailable = (foyer)
 VAR currentLocation = outside
+VAR returnLocation = -> foyer_stories
 
 // State Machines and vars for "quest" progress
 LIST wrongName = ignorant, pamphletHasWrongName, pamphletInvestigated
 ~wrongName = ignorant
-LIST Loki = recievedRiddle, mayGuess, recommendedToLeave
+
 
 -> debug
 
@@ -57,7 +65,7 @@ The sun shines brightly upon the noisy city street. For the past week you've bee
 
 You'd recieved an email informing you that you've won a contest and have a reservation to visit this particular gallery today. The event seems small, but oftentimes that's for the best. 
 
-<- travel_actions()
+<- travel_actions
 
 ->DONE
 

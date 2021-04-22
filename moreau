@@ -7,23 +7,30 @@
  
  <- paintings
  <- travel_actions
+ <- inventory
  - ->DONE
  
  
  =paintings
  * A piece that looks unfinished. . .
     -> the_chimeras ->
+    ~time += 15
  + {the_chimeras}Les Chimères
+    ~time += 15
     -> the_chimeras ->
  * A confrontation . . .
+    ~time += 15
     -> oedipus ->
  + {oedipus}Oedipus and the Sphinx
+    ~time += 15
     -> oedipus ->
  * A figure in the clouds. . .
+    ~time += 15
     -> fontaine ->
  +{fontaine}Fontaine's Fables
+    ~time += 15
     -> fontaine ->
-- That was a nice painting
+- //That was a nice painting
     -> moreau_stories
 
 -> DONE

@@ -1,5 +1,6 @@
 === rousseau_stories ===
-<- travel_actions()
+<- travel_actions
+<- inventory 
 
 The museum opens up before you to reveal a cathedral-like space. Skylights pierce the barrel vaulted ceiling. You imagine long-ago trains belching steam and smoke where now there is lightness and air. 
 + (grandSalon_play) { !grandSalon_play} [Play on the river]
@@ -23,7 +24,8 @@ Taking a break from the stress of your overworked life, you rest by the river. T
 -> DONE
 
 === serpent_charmer_stories ===
-<- travel_actions()
+<- travel_actions
+<- inventory
 
  
 + (find_docent) {!find_docent} [Find a guide.]

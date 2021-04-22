@@ -1,29 +1,34 @@
-LIST possibleItems = phone, driversLicense, pamphlet, riddleCard, coupon
+LIST possibleItems = phone, driversLicense, pamphlet, riddleCard, coupon, pocketMoney, orangeSoda
 VAR items = phone
+~items += pocketMoney
 VAR cardFound = false
 === inventory ===
-~time++
++ Items
+-> manage ->
+-> DONE
 
+=manage
+~time++
 + {items ? phone} Cell phone
     It's {formatTime(time)} P.M.
--> inventory
+->  manage
 + (image){image < 3} Driver's license
     {!Wow, that picture get's worse every time I see it.|Damn. . .| Sigh. . .}
--> inventory
-+  Pamphlet
+-> manage
++  {items ? pamphlet }Pamphlet
     {items ? pamphlet && not (items ? coupon):
     A small card falls out of the pamphlet. On one side it appears to be a coupon for off-brand Oragina. 
     ~items += coupon
-    -> inventory
+    -> manage
     }
     {wrongName < pamphletHasWrongName:
         Looking over the pamphlet you familiarize yourself with the gallery. Then you come to the sticker that {receptionist} put on it. It labeled with the name "Tamitha Lin". Who's name is that?
     ~wrongName = pamphletHasWrongName
     
-    -> inventory
+    -> manage
     }
     No useful information here. Still has the wrong name on it. Who is Tamitha Lin?
-    -> inventory
+    -> manage
     
     
     
@@ -32,18 +37,24 @@ VAR cardFound = false
     Oh, it looks like there is something on the back.
     ~cardFound = true
     - else: 
-    This coupon doesn't appear to be worth much. You can probably throw it out. It probably isn't worth holding on to.
+    This coupon doesn't appear to be worth much. It probably isn't worth holding on to.
     }
     ~items += coupon
--> inventory
+-> manage
 + {cardFound}Riddle
-    {Loki < recievedRiddle: Loki++}
+    {Loki < recievedRiddle: 
+    ~Loki = recievedRiddle
+    }
     On the back of the coupon in elegant hand writing follows:
-    How would you like to enjoy a Low-Key riddle? Upon these walls hangs the aspects of my children. From them four divine thusly. Who am I?
-
--> inventory
-
-
+    How would you like to enjoy a Low-Key riddle? Upon these walls hangs the aspects of my four children. From them, divine thusly: Who am I?
+-> manage
++ (pennies){items ? pocketMoney}Cash
+    A couple of euros of spending money.
+    {pennies > 5: Oh no. You've lost your pocket money!{~itemspocketMoney}}
+-> manage
 
 + Return
+    -> returnLocation
+
+
 ->->
