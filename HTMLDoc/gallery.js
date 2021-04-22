@@ -1,4 +1,4 @@
-let images = 
+let images =
     {
         "SnakeCharmer": {
             features : {
@@ -18,7 +18,7 @@ let images =
                 "Tiger" : {x: 0, y: 1200, width: 1700, height: 900},
                 "Rain" : {x: 1150, y: 0, width: 1840, height: 1220},
                 "Foliage" : {x: 0, y: 525, width: 2990, height: 815},
-             
+
 
             },
             width: 3000,
@@ -28,7 +28,10 @@ let images =
         },
                 "Lion": {
             features : {
-
+              "Greenery" : {x: 80, y: 0, width: 219, height: 106},
+              "Flowers" : {x: 467, y: 139, width: 334, height: 234},
+              "Sunset" : {x: 264, y: 49, width: 230, height: 230},
+              "Lion" : {x: 227, y: 371, width: 214, height: 169},
             },
             width: 800,
             height:551,
@@ -60,9 +63,9 @@ let images =
             source: "images/Fontaine.jpg",
             img: document.createElement("IMG")
         }
-        
+
     }//,
-    
+
 
 
 
@@ -76,14 +79,14 @@ function DisplayImage(artName, featureName)
     }
 
     var canvas = document.getElementById("view");
-    
+
     var ctx = canvas.getContext("2d");
     let img = images[artName].img;
     img.src = images[artName].source;
-    
+
     ctx.fillStyle = "black";
     ctx.fillRect(0, 0, 300, 500);
-    
+
     img.onload = function(){
     if (featureName){
         let feature = images[artName].features[featureName]
@@ -94,12 +97,12 @@ function DisplayImage(artName, featureName)
             }
         let ratio =  feature.height/feature.width;
         ctx.drawImage(
-            img, 
-            feature.x, 
-            feature.y, 
-            feature.width, 
+            img,
+            feature.x,
+            feature.y,
+            feature.width,
             feature.height,
-            0, 
+            0,
             (300-(300*ratio))/2,
             300,
             300*ratio
@@ -110,17 +113,17 @@ function DisplayImage(artName, featureName)
         console.log(300, 500*ratio, ratio,images[artName].width < images[artName].height)
        // let ratio = images[artName].width / images[artName].height;
         ctx.drawImage(
-            img, 
-            0, 
-            0, 
+            img,
+            0,
+            0,
             images[artName].width,
-            images[artName].height, 
-            0, 
-            (500 -300*ratio)/2, 
+            images[artName].height,
+            0,
+            (500 -300*ratio)/2,
             300,
             300*ratio
         );
-            
+
     }
     }
 }
