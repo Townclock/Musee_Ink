@@ -16,6 +16,7 @@ VAR cardFound = false
     It's {formatTime(time)} P.M.
 ->  manage
 + (image){image < 3} Driver's license
+    {items ? charm: Wait. where id my driver's license go? {~items -= driversLicense} -> manage}
     {!Wow, that picture get's worse every time I see it.|Damn. . .| Sigh. . .}
 -> manage
 +  {items ? pamphlet }Pamphlet
@@ -61,7 +62,7 @@ VAR cardFound = false
     {pennies > 5: Oh no. You've lost your pocket money!{~itemspocketMoney}}
 -> manage
 + {items ? charm} Wooden Disk
-    {wintryName} gave me this. If you look closely you can see a {highBeast()} on it.
+    This wooden trinket is suspended on a leather cord. It was given to me by {wintryName}. If you look closely you can see a {highBeast()} on it. There are letters carved into the back, worn by time: -A- L--
 -> manage
 + Return
     -> returnLocation
