@@ -35,8 +35,10 @@ Standing next to you is a little girl, holding the hand of her mother, as they g
  * (trees) The trees are dark and deep, lovely.
     ~themes += paradise
     **I see the owl, but where are the other birds? #InkGallery: Trees
+    <- flyingBeasts
     ->all_birds
     **Ahh, I see them! The parrots...they look happy, content and safe. We have a bird on the ground, the spoonbill. There is the owl. And our love birds, the parrots.
+    <- flyingBeasts
     ~themes += safety
     -> wrapUp
 =some_birds

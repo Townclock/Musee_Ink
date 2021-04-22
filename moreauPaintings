@@ -37,4 +37,58 @@ It's a large and unfinished forest scene. There's a lot of detail, but it's diff
  ->->
 
  === oedipus ===
+ Gustave Moreau's Oedipus and the Sphinx# InkGallery: Oedipus
+ 
+ This painting captures the duel between Oedipus who has taken up the quest to kill the sphinx, but must first answer her riddle.
+    ~themes += riddles
+    
+    {themes ? death: This moment is balanced.}
+    
+ -
+ * Faces
+    Oedipus has been asked his riddle and is obviously thinking very hard to figure out the answer.
+    Looking at the sphinx's eyes and posture you can tell that she's just waiting for him to screw up so that she can eat him.
+    <- devouringBeasts
+    -> Plants ->
+    
+    {themes? prey: 
+    # InkGallery: Oedipus Bodies
+    This didn't work out for everyone who came before.
+    }
+ *(urn) What's that thing? the right foreground?
+ # InkGallery: Oedipus Snake
+    ~themes += death
+    ** Butterfly?
+    # InkGallery: Oedipus Butterfly
+    In Greek myth butterflies are associated with the soul. A soul leaving an urn. Perhaps a little heavy handed. 
+    <- flyingBeasts
+    
+    ** (snake){not snek}A Snake?
+    # InkGallery: Oedipus Snake
+    {themes ? treeSnake: This little guy looks like he's climing a tree.}
+    ~themes += treeSnake
+    <- creepingBeasts
+    
+    
+ * (snek){not oedipus.snake}Snake!
+    Look at this lad. Climbing up to that urn. Doing it's best.
+    ~themes += treeSnake
+    <- creepingBeasts
+    -> urn
+ - ->->
+ 
+ =Plants
+ Will Moreau's Oedipus rise to the challenge and survice?
+  {themes? safety:
+ # InkGallery: Oedipus FigTree
+ The bay tree behind Oedipus suggests that he will hold to virtue and succeed in his goal.
+ }
+ {themes? temptation:
+ # InkGallery: Oedipus FigTree
+ The fig tree, Christian symbol of temptation and sin would say otherwise.
+ }
+ ->->
+ 
+ 
+ 
  ->->
