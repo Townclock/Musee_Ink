@@ -5,6 +5,7 @@ let images =
                 "Trees" : {x: 820, y: 0, width: 1755, height: 900},
                 "Birds" : {x: 1420, y: 0, width: 1255, height: 750},
                 "Sky" : {x: 0, y: 0, width: 880, height: 945},
+                "Eve" : {x: 680, y: 930, width: 520, height: 1250},
             },
             width: 3556,
             height:3147,
