@@ -5,13 +5,13 @@
 
   
  
- <- paintings
+ <- moreau_paintings
  <- travel_actions
  <- inventory
  - ->DONE
  
  
- =paintings
+ =moreau_paintings
  *{ time > 90 && Wintry == photoAsked}[Talk to {wintryName}]
  -> wintry.photography
  * { time < 30 or time > 90}A piece that looks unfinished. . .
@@ -44,7 +44,7 @@
  +{fontaine}Fontaine's Fables
     ~time += 15
     -> fontaine ->
-- //That was a nice painting
+- 
     -> moreau_stories
 
 -> DONE

@@ -1,5 +1,5 @@
 
-=== surpise ===
+=== surprise ===
 
 
 ->->
@@ -8,10 +8,19 @@
 
 The Repast of the Lion
 
+{repast == 1:
 You examine the painting:
 
 Lush greenery, colorful flowers, and a calm sunset all frame a lion – feasting on a leopard as he stares back at you.
 -> repast_options
+}
+{repast > 1: 
+#InkGallery: Repast Close-Up
+    *Leave 
+    -> leave
+}
+=leave
+->->
 
 =repast_options
 + (A) Look closely at the greenery
@@ -34,8 +43,18 @@ Your gaze <i>finally</i> meets the lion's. "Has he been watching me this whole t
 *Perhaps you should hurry along.
 ->->
 
+
+
+
+
+
+
 === snakecharmer ===
-
-
-
+{snakecharmer == 1: -> snakeCharmer1 ->->}
+{snakecharmer == 2: -> snakeCharmer2 ->->}
+ 
+    #InkGallery: SnakeCharmer
+    *leave ->->
+}
+=Leave
 ->->

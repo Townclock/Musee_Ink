@@ -5,8 +5,8 @@ VAR wintryName = "photographer"
 =chimeras
 "I plan on finishing it," she says matter of factly. "Moreaus work is so rich, it is such a pity that this particular painting when uncompleted. He had it all planned out." She is making minute adjustments to the tripod checking the viewfinder of her camera every moment or two.
 *"Do you mean this one?"
-    "Well, I could." You can see an amused smile on the side of her face. "But I mosty just use photoshop now. I've got a web blog." 
-    Looking over her equipment you do see a small box of business cards. You take one. It reads: M.S. Winters.
+    "Well, I could, given the right circumstances" You can see an amused smile on the side of her face. "I mosty just use photoshop now. I've got a web blog." 
+    Looking over her equipment you do see a small box of business cards. You take one. It reads: M.S. Winter.
     "I call it meta-restoration. Extracting a possible from a future from a piece. And damn if there aren't hundreds of futures in this one."
     ~items += wintryCard
 *"Isn't that a bit arrogant?"
@@ -68,9 +68,10 @@ From her jacket pocket Sara pulls out a small wooden disk. "Take this. It'll hel
     "Don't worry {highBeast()}. It will be as easy as pie."
 * "I'm here for the photo."
 -
-She steps away from the window and invites you to stand in the afternoon glow. Over the course of a few minutes {~time+=9} she carefully pose you.
+She steps away from the window and invites you to stand in the afternoon glow. Over the course of a few minutes she carefully pose you.
     "I know this is tedisous," she starts and shifts your head two degrees clockwise, "but I always get it right the first time."
     All you can do is swallow in response.
+    ~time+=9
     
     *CLICK
     -> theGarden
@@ -78,9 +79,41 @@ She steps away from the window and invites you to stand in the afternoon glow. O
  -> returnLocation
  
  = confrontation
- 
+    ~wintryName = "Winter"
+    "So you figured it out my pet."
+    {wintryName} smiles revealing sharp teeth that you don't remember being there the first time. The window behind her seems to frost over in an instant. The room is now empty except for the two of you.
+    ~fear++
+    {fear >= terrified:
+        Your will breaks and you flee to the foyer.
+        ~currentLocation = foyer
+        ~returnLocation = ->foyer_stories
+    ->foyer_stories
+    }
+    
+- (why)
+    * "Who are you?"
+    "I've never lied. My name Maeve Sara Winter. Dame of Winter And yes it's true I do have a web blog." She smiles and begins to lift her camera.
+    *What do you want?
+        "All I want is to take your photo and help you fulfill your destiny"
+    *"Why me?"
+        "You haven't figure it out yet?"
+    * {why > 1} [GET OUT]
+        You wasted too much time. As you turn your to flee, you feel it. The light is hitting you at the perfect angle. Oh no. . .
+    * {why < 2}[GET OUT]
+        You flee to the foyer.
+        ~currentLocation = foyer
+        ~returnLocation = ->foyer_stories
+        ->foyer_stories
+    - {!She smiles and begins to lift her camera.|She lifts the camera to eye level.}
+    {why < 3: -> why}
+    *CLICK
+    -> theGarden
 -> DONE
  = theGarden
- 
--> DONE
+    You awaken yet again upon warm grass. The sun beats upon your {flyingBeasts>= devouringBeasts:feathered}{flyingBeasts < devouringBeasts:furred} back{flyingBeasts > 2: and wings}.
+    You turn your head skyward stretching your {creepingBeasts==1: long}{creepingBeasts==2: very long}{creepingBeasts>2: damn-long} neck. {items?charm: Around your neck the wooden charm dangles so that you don't forget whou you are.}
+    Through the pixelated sky you can see out into a myriad of words. Some flash by in an instant.
+    What came before?
+    
+-> END
  

@@ -47,8 +47,10 @@ VAR LokiLocation = cafeteria
     -> returnLocation
     
     -
-    
-    
-
 -> DONE
 }
+
+=LokiEnding
+    The next morning you sleep in. After making yourself a nice cup of coffee you go to sit on the balcony of your hotel room. As you sit then, casually going over your plans for the day the light flickers.
+    Glancing up to the sky you watch as large spikes (teeth) close in around the sun. The world turns red as the light filters through the gums of some astronomically huge beast.
+-> END

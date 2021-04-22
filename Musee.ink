@@ -13,6 +13,10 @@ INCLUDE cafeteria
 INCLUDE Loki
 INCLUDE naming
 INCLUDE WintryLady
+INCLUDE snakeCharmer1
+INCLUDE snakeCharmer2
+
+
 
 
 
@@ -41,7 +45,7 @@ VAR devouring = 0
 VAR flying = 0
 
 // Specific Themes
-LIST possibleThemes = mystery, death, riddles, fables, chimera, eve, creation, temptation, paradise, ridingBeasts, treeSnake
+LIST possibleThemes = mystery, death, riddles, fables, chimera, eve, creation, temptation, paradise, ridingBeasts, treeSnake, flight, prey, safety
 VAR themes = (mystery)
 
 // Locations

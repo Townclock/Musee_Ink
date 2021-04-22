@@ -1,0 +1,50 @@
+=== snakeCharmer1 ===
+La Charmeuse de Serpents
+
+You examine the painting:
+
+The dark figure of a woman stares back at you, a snake coiled around her. Other snakes rise to her music. "What is the meaning of this painting? Am I Eve? Is my admirer a snake?" #InkGallery: SerpentCharmer
+
+ * Who is this? #InkGallery: SerpentCharmer
+    It is Rousseau's Black Eve, mother of us all.
+        ** Perhaps. Where is she? -> eden
+        ** Is she meant to be alone?
+            No, but she is tempting fate. -> banished
+        ** But she's surrounded by snakes? How'd did that happen?
+            -> banished
+ * Where is she? #InkGallery: Rosalia Palermo
+    This is the Garden of Eden. Eve has tasted the forbidden fruit, and knows good and evil.
+        ~themes += temptation
+        **Where is Adam?
+            Adam has yet to be tempted. They remain in paradise, for now.
+            ~themes += paradise
+        **So what exactly did she do?
+            -> banished
+        
+        ** (real)This is a bit too real.
+            I don't think there are any knowledge here for me. #InkGallery: Rosalia
+            
+ 
+ * (eden) Wait. If this is Eden, where is the tree of knowledge? #InkGallery: Rosalia Skull
+    ~themes += creation
+    The snakes are tempted by her, not the other way around. Why?
+    ** Do I <i>really</i> want to know more?
+    -> banished
+    ** Unlike Eve, I've gained no knowledge here.
+    -> real
+
+- 
+
+-> wrapUp
+=banished
+Once Eve has tasted knowledge, and shared it with Adam, they are banished from paradise. She is sentenced to a life of sorrow and hardship in childbirth. #InkGallery: Rosalia Face
+** . . .
+** . . .
+-
+But she also becomes the mother of all humanity. #InkGallery: Rosalia
+~themes += creation
+
+-> wrapUp
+
+=wrapUp
+->->
