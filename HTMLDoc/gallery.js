@@ -26,7 +26,7 @@ let images =
             source: "images/Surprised.jpg",
             img: document.createElement("IMG")
         },
-                "Lion": {
+                "Repast": {
             features : {
               "Greenery" : {x: 80, y: 0, width: 219, height: 106},
               "Flowers" : {x: 467, y: 139, width: 334, height: 234},
@@ -49,6 +49,10 @@ let images =
             img: document.createElement("IMG")
         },        "Chimeras": {
             features : {
+              "Overall" : {x: 552, y: 559, width: 809, height: 809},
+              "Unfinished" : {x: 257, y: 661, width: 611, height: 402},
+              "Winged" : {x: 404, y: 537, width: 300, height: 300},
+              "Women" : {x: 563, y: 1221, width: 547, height: 344},
             },
             width: 1449,
             height:1688,
