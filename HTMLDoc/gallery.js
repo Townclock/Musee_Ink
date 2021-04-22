@@ -6,6 +6,7 @@ let images =
                 "Birds" : {x: 1420, y: 0, width: 1255, height: 750},
                 "Sky" : {x: 0, y: 0, width: 880, height: 945},
                 "Eve" : {x: 680, y: 930, width: 520, height: 1250},
+                "Parrots" : {x: 1800, y: 160, width: 240, height: 380},
             },
             width: 3556,
             height:3147,
