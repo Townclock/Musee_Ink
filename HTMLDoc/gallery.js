@@ -15,6 +15,10 @@ let images =
         },
                 "Surprise": {
             features : {
+                "Tiger" : {x: 0, y: 1200, width: 1700, height: 900},
+                "Rain" : {x: 1150, y: 0, width: 1840, height: 1220},
+                "Foliage" : {x: 0, y: 525, width: 2990, height: 815},
+             
 
             },
             width: 3000,
