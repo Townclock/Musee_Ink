@@ -1,0 +1,34 @@
+=== cafeteria_stories ===
+The cafeteria is a small room adjacent to the main gallery. There is a small kiosk which offers some simple fare. Mostly pre-packaged ready-to-eat foods.
+
+The cafeteria is mostly empty.
+
+<- snacks
+<- travel_actions
+<- inventory
+-> DONE
+
+
+
+-> cafeteria_stories
+
+=== snacks ==
++ {hunger > satisfied && items ? pocketMoney}Buy a snack.
+    ~items -= pocketMoney
+    ~temp snack = "croissant"
+    {themes ? temptation:
+        ~snack = "chocolate croissant"
+        }
+    
+    You spend what you have of your pocket money to buy {snack}.
+    {hunger == peckish: 
+        The {snack} is delcicious. You take your time enjoying it.
+     ~time += 15
+    }
+    {hunger == famished: 
+        You quickly devour the {snack}{devouringBeasts>1: like one of the beasts you saw in the paintings}. 
+    ~time += 5
+    }
+     ~hunger = satisfied
+    You check the time: {formatTime(time)}.
+-> cafeteria_stories

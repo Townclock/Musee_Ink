@@ -1,0 +1,53 @@
+LIST Loki = noClue, recievedRiddle, recommendedToLeave
+VAR LokiLocation = cafeteria
+~Loki = noClue
+
+=== loki_conversation ===
+{Loki < recommendedToLeave:An older woman}{Loki == recommendedToLeave:Loki} sits in the corner of the {currentLocation}. -> answering
+
+
+=answering
+
+*(intro){Loki == recievedRiddle}Talk with the woman.
+    She is the one who slipped you the card. You {fear==confident:confidently } step up to her.
+    She looks up at you smiling. "So are you ready to answer my riddle?" She asks as if everything is perfectly normal{dream > grounded: (it is not obviously. This is weird. Strangers don't just slip eachother riddles.)}.
++{Loki == recievedRiddle && intro}[Talk with the woman.] "I'm here about the riddle."
+-  -> LokiQuestions 
+=LokiQuestions
+    +Gonna need a hint.
+    {devouringBeasts == 0 &&flyingBeasts ==0 && creepingBeasts ==0 && not(themes ? eve)&& not(themes ? ridingBeasts): "I'm not going to just give it away." You've got the whole gallery to explore. -> LokiQuestions}
+    {devouringBeasts > 0: "One son of mine is a mighty beast. Put away the kibble, he's got something much bigger on the menu."}
+    
+    {flyingBeasts > 0: "Perhaps not a bird proper, but this child can surely fly.{themes ? ridingBeasts: Only the mightest will ride them.}"} 
+    
+    {creepingBeasts > 0: "This child of mine creeps within the roots{themes?treeSnake: of a tree which spans worlds}.}
+    {themes ? eve: Eve she is not, but my child does share the affinity for snakes."}
+    
+    ->LokiQuestions
+    +[Answer the Riddle] "I'm ready to answer," you say. The woman raises her eyebrows at you.
+    -> NameInput ->
+    {Name == "LOKI": 
+    She stands up. "Congratulations. Took you long enough."
+    And now for your reward. She steps close and grabs one of your shoulds. She whispers into your ear. 
+    "Get out of this museum before you get eaten."
+    She steps back and smiles at you. Then sits down and returns to her magazine.
+    ~Loki = recommendedToLeave
+    ~fear++
+    -> returnLocation
+    - else:
+    She frowns and returns to her magazine.
+    -> LokiQuestions
+    }
+    +{fear < dread}I need more time.
+    -> returnLocation
+    +{fear > unsettled} I don't want to play your game.
+    She frowns. "I think you'd better watch your back then." 
+    ~fear++
+    -> returnLocation
+    
+    -
+    
+    
+
+-> DONE
+}

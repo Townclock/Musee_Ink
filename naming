@@ -1,0 +1,69 @@
+VAR Name = ""
+=== NameInput ===
+    * {Name != ""} "Your name is {Name}."
+        ->->
+    + [E, A]
+        ++ [E]
+        ~Name += "E"
+        ++ [A]
+        ~Name += "A"
+    + [R, I, O]
+        ++ [R]
+        ~Name += "R"
+        ++ [I]
+        ~Name += "I"
+        ++ [O]
+        ~Name += "O"
+    +[T, N, S] 
+        ++ [T]
+        ~Name += "T"
+        ++ [N]
+        ~Name += "N"
+        ++ [S]
+        ~Name += "S"
+    +[L, C, U, D, P]
+        ++ [L]
+        ~Name += "L"
+        ++ [C]
+        ~Name += "C"
+        ++ [U]
+        ~Name += "U"
+        ++ [D]
+        ~Name += "D"
+        ++ [P]
+        ~Name += "P"
+    +[M, H, G, B, F, Y, W]
+        ++ [M]
+        ~Name += "M"
+        ++ [H]
+        ~Name += "H"
+        ++ [G]
+        ~Name += "G"
+        ++ [B]
+        ~Name += "B"
+        ++ [F]
+        ~Name += "F"
+        ++ [Y]
+        ~Name += "Y"
+        ++ [W]
+        ~Name += "W"
+    +[K, V, X, Z, J, Q]
+        ++ [K]
+        ~Name += "K"
+        ++ [V]
+        ~Name += "V"
+        ++ [X]
+        ~Name += "X"
+        ++ [Z]
+        ~Name += "Z"
+        ++ [J]
+        ~Name += "J"
+        ++ [Q]
+        ~Name += "Q"
+    + {Name != ""} [Let me start over.]
+        ~Name = ""
+        -> NameInput
+        
+    - -> NameInput
+    
+- ->->
