@@ -1,4 +1,7 @@
-LIST possibleItems = phone, driversLicense, pamphlet, riddleCard, coupon, pocketMoney, orangeSoda
+LIST possibleItems = phone, driversLicense, pamphlet, riddleCard, coupon, pocketMoney, orangeSoda, wintryCard, charm
+LIST tamithaLin = whoIsTamithaLin, wintrytamLin, wintrySetup
+LIST wrongName = ignorant, pamphletHasWrongName, pamphletInvestigated
+~wrongName = ignorant
 VAR items = phone
 ~items += pocketMoney
 VAR cardFound = false
@@ -24,10 +27,15 @@ VAR cardFound = false
     {wrongName < pamphletHasWrongName:
         Looking over the pamphlet you familiarize yourself with the gallery. Then you come to the sticker that {receptionist} put on it. It labeled with the name "Tamitha Lin". Who's name is that?
     ~wrongName = pamphletHasWrongName
-    
+    -> manage
+    }
+    {wrongName > ignorant && tamithaLin >= wintrytamLin:
+    Tam Lin - Tamitha Lin? Does Sara the photographer have something to do with this? Did she send me this?
+    ~tamithaLin = wintrySetup
     -> manage
     }
     No useful information here. Still has the wrong name on it. Who is Tamitha Lin?
+     {wrongName == pamphletInvestigated: Did I get someone else's ticket or did someone set this up?}
     -> manage
     
     
@@ -52,7 +60,9 @@ VAR cardFound = false
     A couple of euros of spending money.
     {pennies > 5: Oh no. You've lost your pocket money!{~itemspocketMoney}}
 -> manage
-
++ {items ? charm} Wooden Disk
+    {wintryName} gave me this. If you look closely you can see a {highBeast()} on it.
+-> manage
 + Return
     -> returnLocation
 

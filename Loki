@@ -7,7 +7,7 @@ VAR LokiLocation = cafeteria
 
 
 =answering
-
+~time += 5
 *(intro){Loki == recievedRiddle}Talk with the woman.
     She is the one who slipped you the card. You {fear==confident:confidently } step up to her.
     She looks up at you smiling. "So are you ready to answer my riddle?" She asks as if everything is perfectly normal{dream > grounded: (it is not obviously. This is weird. Strangers don't just slip eachother riddles.)}.
@@ -25,6 +25,7 @@ VAR LokiLocation = cafeteria
     
     ->LokiQuestions
     +[Answer the Riddle] "I'm ready to answer," you say. The woman raises her eyebrows at you.
+    ~time += 2
     -> NameInput ->
     {Name == "LOKI": 
     She stands up. "Congratulations. Took you long enough."

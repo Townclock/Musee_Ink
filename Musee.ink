@@ -12,6 +12,8 @@ INCLUDE travel
 INCLUDE cafeteria
 INCLUDE Loki
 INCLUDE naming
+INCLUDE WintryLady
+
 
 
 
@@ -49,8 +51,6 @@ VAR currentLocation = outside
 VAR returnLocation = -> foyer_stories
 
 // State Machines and vars for "quest" progress
-LIST wrongName = ignorant, pamphletHasWrongName, pamphletInvestigated
-~wrongName = ignorant
 
 
 -> debug

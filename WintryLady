@@ -1,0 +1,86 @@
+LIST Wintry = photoAsked, photoTaken
+VAR wintryName = "photographer"
+
+===wintry===
+=chimeras
+"I plan on finishing it," she says matter of factly. "Moreaus work is so rich, it is such a pity that this particular painting when uncompleted. He had it all planned out." She is making minute adjustments to the tripod checking the viewfinder of her camera every moment or two.
+*"Do you mean this one?"
+    "Well, I could." You can see an amused smile on the side of her face. "But I mosty just use photoshop now. I've got a web blog." 
+    Looking over her equipment you do see a small box of business cards. You take one. It reads: M.S. Winters.
+    "I call it meta-restoration. Extracting a possible from a future from a piece. And damn if there aren't hundreds of futures in this one."
+    ~items += wintryCard
+*"Isn't that a bit arrogant?"
+    "Not at all," she responds. "Look, no art is pure. Everything is layers. A history of one machine attaching to a previous machine."
+    "But this piece is more than a hundred years older than you. How can you know what futures it might have had?" You ask.
+    She laughs. "Wow, I'm flattered."
+*"I will leave you to your work."
+    "No no, give me a second. It's not often someone actually shows interested.
+-
+She finally turns towards her short platinum white hair flowing through the air. She is smiling. "My name is Sara. Nice to meet you." Her eyes meet yours and suddenly her smile grows a bit more predatory. "Your perfect! Can I take your picture?
+
+~wintryName = "Sara"
+~Wintry=photoAsked
+*"What! why?"
+    "I can't invent futures for paintings out of whole cloth. Look your face would be perfect right here." {wintryName} points to the painting. #Inkgallery Chimera wintry
+*"My face is nothing special."
+    "You have a gorgeous face. And I don't have to power to invent new faces just like that." {wintryName} points to the unfinished painting. "How would you like to be right here?"#Inkgaller Chimera wintry
+*(model)"{chiMEra:Me. A Chimera? Wicked!} Why of course!"
+    After all. It's not every day that you get to model{chiMEra: a monster}.
+    "Thank you. Come back here after 2:30 and we'll make it snappy." {wintryName} mimes a camera. It's "hilarious". 
+    I've got to get back to get my work. See you then.
+     -> returnLocation
+- 
+* (chiMEra)["Me. A Chimera? Wicked!"]
+    -> model
+* "Why would I want to be a monster?"
+    {wintryName} laughs. "They're not monsters. They are the state of everyting. Don't you see?" She points at the paingting. "Do you see any violence in the piece?"
+    "Here?"
+    "Here?"
+    "As the kids say, they are just vibing. We live in a time when it's okay for our lovers to be monsters." 
+* {inventory.image < 1} Am I really that ugly?
+    "We all are passing through a metamorphosis. It is not what we appear to be, but who we are that counts. You are beautiful."
+* {inventory.image > 0} I am that ugly.
+    "Stupid child. You are beautiful."
+- 
+"Have you ever the story of Tam Lin and Jannette?"
+"Tam Lin was captured by a fairy queen as a child, but it was through the dedication of Jannette that he was able self-actualized."
+{wrongName >= pamphletHasWrongName: Tam Lin. Why does that name sound familiar?}
+~tamithaLin = wintrytamLin
+"She held him as he changed from lion, to bear, to snake. Tam Lin was never wholly these things. These forms did not destroy him, but were merely different states. All humans must go through a number of monstrous shapes before they become themselves. Each step of the process is beautiful."
+From her jacket pocket Sara pulls out a small wooden disk. "Take this. It'll help you understand."
+~items += charm
+"Come back here after 2:30. I've got to get back to get my work." Sarah turns back to the tuning of her equipment.
+     -> returnLocation
+
+=photography
+{wintryName} has already put away most of the equipment. She stands there alone by the window. The camera hangs around her neck. A sparkled of sunlight shines off of it and into your eyes.
+* {tamithaLin == wintrySetup} "You sent me the ticket!"
+-> confrontation
+* {fear > unsettled} ["Why are you so damn scary!"]"Why are you so damn scary!" you scream doesn't seem to catch her off guard. {~fear++} You stand there staring until your will breaks and you flee into the foyer.
+    ~currentLocation = foyer
+    ~returnLocation = ->foyer_stories
+    ->foyer_stories
+
+* {model}"I'm here for the photo. Woo!"
+    "Woo!" Sarah fist pumps and mimic your enthusiasim. 
+    
+* {fear == dread}"Um, I'm here for the photography thing."
+    "Don't worry {highBeast()}. It will be as easy as pie."
+* "I'm here for the photo."
+-
+She steps away from the window and invites you to stand in the afternoon glow. Over the course of a few minutes {~time+=9} she carefully pose you.
+    "I know this is tedisous," she starts and shifts your head two degrees clockwise, "but I always get it right the first time."
+    All you can do is swallow in response.
+    
+    *CLICK
+    -> theGarden
+
+ -> returnLocation
+ 
+ = confrontation
+ 
+-> DONE
+ = theGarden
+ 
+-> DONE
+ 

@@ -9,4 +9,15 @@
 - else:
 ~ return hours + ":0" + minutes
 
-} 
+}
+
+== function highBeast() ==
+~ temp winner = "little kitty"
+{devouringBeasts < flyingBeasts:  
+    ~winner = "little bird"
+}
+{devouringBeasts < creepingBeasts and flyingBeasts < creepingBeasts:  
+    ~winner = "little viper"
+    }
+~ return winner
+}

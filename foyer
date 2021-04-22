@@ -37,11 +37,10 @@ VAR receptionist = "The receptionist"
         ~LokiLocation = foyer
         *** Show email.
         -> email
-   // * *  "No, I was hoping to enter without them." 
-   //     "She disapproves, as only a French woman of a certain age can. "I am sorry, we are limited to only those with ticketed reservations."
-    //        -> foyer_stories NO need for this branch because it deadends and doesn't express anything
-    + + ->
-        There are no reservations available for today.
+    * {wrongName == pamphletHasWrongName} [Ask {receptionist} about the pamphlet.]
+        "Excuse me?" you ask, "This sticker has someone else's name is. I don't know any Tamitha Lins"
+        {receptionist} turns to you and sighs. "That's just the name associated wth the QR code in the email. No one cares. Now if you would excuse me. I've got this line-" She turns away from you and continues her work.
+        ~wrongName++
         -> foyer_stories
     * ->
 ->DONE

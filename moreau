@@ -12,12 +12,26 @@
  
  
  =paintings
- * A piece that looks unfinished. . .
+ *{ time > 90 && Wintry == photoAsked}[Talk to {wintryName}]
+ -> wintry.photography
+ * { time < 30 or time > 90}A piece that looks unfinished. . .
     -> the_chimeras ->
     ~time += 15
- + {the_chimeras}Les Chimères
+ + { time < 30 or time > 90}{the_chimeras}Les Chimères
     ~time += 15
     -> the_chimeras ->
+ *{ time >= 30 and time <= 90}[A photographer. . .]
+    The photographer has set up a couple of standing direction lamps and a tripod. In soft but deliberate motions she is adjusting their heights and angles. It's hard to see the piece she is framing.
+    "Hey don't be shy. If you're interested come look closer." She invites.
+    You move closer and see the piece she is taking a photo of. 
+    {the_chimeras:
+    It is The Chimeras. 
+    -else: It is the unfinished Moreau piece.
+    } 
+    ~time += 15
+    -> wintry.chimeras
+    
+        
  * A confrontation . . .
     ~time += 15
     -> oedipus ->
