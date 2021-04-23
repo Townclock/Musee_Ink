@@ -11,7 +11,7 @@ It's a large and unfinished forest scene. There's a lot of detail, but it's diff
 * (Overall) [Lean in to scan the image.]
     You lean in and realize that the forest contains dozens of nude women <i>lounging</i> amongst creatures as if unaware of the impending danger. #InkGallery: Chimeras Overall
         ** [Zoom into the center.]
-        Your eyes dart toward the center where you spot a woman confidently riding on a winged chimera in complete control of her destiny. Her gusto rubs off on you{B: and, somehow, all the fear immediately exits your body}. #InkGallery: Chimeras Winged
+        Your eyes dart toward the center where you spot a woman confidently riding on a winged chimera in complete control of her destiny. Her gusto rubs off on you{Unfinished: and, somehow, all the fear immediately exits your body}. #InkGallery: Chimeras Winged
         <- flyingBeasts
         ~fear--
         Still feeling {dream}, but now {fear}, you decide to turn your attention elsewhere. 
@@ -21,7 +21,7 @@ It's a large and unfinished forest scene. There's a lot of detail, but it's diff
         <- creepingBeasts
         ~fear--
         {
-            - B:
+            - Unfinished:
                 Now feeling {fear} and {dream}, you decide to turn your attention elsewhere. 
             - else:
                 Still feeling {fear}, but now {dream}, you decide to turn your attention elsewhere.
