@@ -36,8 +36,8 @@
     {Loki == recommendedToLeave: -> Loki.LokiEnding}
     {items ? charm: -> wintry.theGarden}
     
-    {fear == terrified: You run through the streets of Paris trying to get to your hotel room as quickly as possible, dodging every person like so many enormous wasps. You lock yourside inside. When you finally feel safe, the moon is out and shining through the window. You cry.->END}
-    {time > 180: You leave the gallery without incident. You go on to live a full and happy life. ->END}
+    {fear == terrified: You run through the crowded streets of Paris trying to get to safety. Overhead, the gargoyles and grotesques of Paris mock you. You run through the lobby of your hostel and upstairs to your room. You lock yourside inside. Feeling trapped still, you open a window to the evening sky. The moon is out and shining through the window. You collapse into your bed, trembling, but safe.->END}
+    {time > 180: You leave the gallery and walk away from the museum without incident. You go on to live a full and happy life. ->END}
     ->END
 
 - -> DONE
@@ -50,6 +50,6 @@
  
  === fleeing ===
  {fear == terrified:
- I'm starting to get freaked out. Maybe I should get out of here.
+ I do not like it here. Something's off. Maybe I should get out of here.
  }
  -> DONE
