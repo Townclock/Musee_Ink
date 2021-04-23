@@ -1,0 +1,55 @@
+
+// Travel menu
+=== travel_actions ===
+{time > 60 && !appetite: <- appetite }
+<- fleeing
+
+* Enter the Gallery
+  ~currentLocation = foyer
+~returnLocation = ->foyer_stories
+ -> foyer_stories
+ 
++ {CanTravel(moreau)} [Gustave Moreau Collection]
+
+  ~currentLocation = moreau
+~returnLocation = ->moreau_stories
+  ->moreau_stories
+  
++ {CanTravel(rousseau)} [Henri Rousseau Collection]
+  Gallery One is a favourite. The post-impressionist Rousseau's "La Charmeuse de Serpents" dominates the room. Toulouse-Lautrec's Moulin Rouge works occupy and brighten the far corner. A small crowd gathers to ponder the black Eve in her garden of Eden.
+  ~currentLocation = rousseau
+~returnLocation = ->rousseau_stories
+  -> rousseau_stories
+  
+ + {CanTravel(foyer) && foyer_stories} [Return to the Foyer]
+  People are excited that the museum has reopened...
+  ~currentLocation = foyer
+~returnLocation = ->foyer_stories
+  -> foyer_stories
+
+ + {CanTravel(cafeteria)} [Cafeteria]
+
+  ~currentLocation = cafeteria
+~returnLocation = ->cafeteria_stories
+  ->cafeteria_stories
+    * {Loki == recommendedToLeave or fear == terrified or time > 180}Leave Gallery
+    {Loki == recommendedToLeave: -> Loki.LokiEnding}
+    {items ? charm: -> wintry.theGarden}
+    
+    {fear == terrified: You run through the streets of Paris trying to get to your hotel room as quickly as possible, dodging every person like so many enormous wasps. You lock yourside inside. When you finally feel safe, the moon is out and shining through the window. You cry.->END}
+    {time > 180: You leave the gallery without incident. You go on to live a full and happy life. ->END}
+    ->END
+
+- -> DONE
+-> DONE
+=== appetite ===
+~hunger++
+{I'm starting to get hungry.|I could really use a bite to eat.|I'm famished.}
+~locationsAvailable += cafeteria
+ -> DONE
+ 
+ === fleeing ===
+ {fear == terrified:
+ I'm starting to get freaked out. Maybe I should get out of here.
+ }
+ -> DONE
