@@ -1,5 +1,6 @@
 LIST Wintry = photoAsked, photoTaken
 VAR wintryName = "photographer"
+VAR WintryCompromise = false 
 
 ===wintry===
 =chimeras
@@ -21,9 +22,9 @@ She finally turns towards her short platinum white hair flowing through the air.
 ~wintryName = "Sara"
 ~Wintry=photoAsked
 *"What! why?"
-    "I can't invent futures for paintings out of whole cloth. Look your face would be perfect right here." {wintryName} points to the painting. #Inkgallery Chimera wintry
+    "I can't invent futures for paintings out of whole cloth. Look your face would be perfect right here." {wintryName} points to the painting. #Inkgallery Chimera Wintry
 *"My face is nothing special."
-    "You have a gorgeous face. And I don't have to power to invent new faces just like that." {wintryName} points to the unfinished painting. "How would you like to be right here?"#Inkgaller Chimera wintry
+    "You have a gorgeous face. And I don't have to power to invent new faces just like that." {wintryName} points to the unfinished painting. "How would you like to be right here?"#Inkgaller Chimera Wintry
 *(model)"{chiMEra:Me. A Chimera? Wicked!} Why of course!"
     After all. It's not every day that you get to model{chiMEra: a monster}.
     "Thank you. Come back here after 2:30 and we'll make it snappy." {wintryName} mimes a camera. It's "hilarious". 
@@ -41,6 +42,10 @@ She finally turns towards her short platinum white hair flowing through the air.
     "We all are passing through a metamorphosis. It is not what we appear to be, but who we are that counts. You are beautiful."
 * {inventory.image > 0} I am that ugly.
     "Stupid child. You are beautiful."
+* {inventory.image > 0} [What about the women.] "I would much rather be on of the women if that's possible." You point to one of the women sitting comfortably in the crowd." #Inkgaller Chimera Compromise
+    ~WintryCompromise = true
+    {wintryName} bites her lip. "Well, I am not completely above compromise. . . It's a deal. Come talk to me after 2:30 and we'll put you in that place."
+    -> returnLocation
 - 
 "Have you ever the story of Tam Lin and Jannette?"
 "Tam Lin was captured by a fairy queen as a child, but it was through the dedication of Jannette that he was able self-actualized."
@@ -54,6 +59,8 @@ From her jacket pocket Sara pulls out a small wooden disk. "Take this. It'll hel
 
 =photography
 {wintryName} has already put away most of the equipment. She stands there alone by the window. The camera hangs around her neck. A sparkled of sunlight shines off of it and into your eyes.
+    {snacks: She gestures to her cheek. "You have some food on your face." She giggles as you wipe it off.}
+
 * {tamithaLin == wintrySetup} "You sent me the ticket!"
 -> confrontation
 * {fear > unsettled} ["Why are you so damn scary!"]"Why are you so damn scary!" you scream doesn't seem to catch her off guard. {~fear++} You stand there staring until your will breaks and you flee into the foyer.
