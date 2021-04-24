@@ -1,4 +1,5 @@
 === rousseau_stories ===
+#InkGallery: Off
 <- rousseau_paintings
 <- travel_actions
 <- inventory 
@@ -21,10 +22,10 @@
     -> repast ->
  * A world of movement. . .
     ~time += 15
-    -> surprise ->
- +{surprise}Surprised
+    -> surprised ->
+ +{surprised}Surprised
     ~time += 15
-    -> surprise ->
+    -> surprised ->
 - 
 
 -> DONE

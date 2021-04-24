@@ -8,46 +8,51 @@ It's a large and unfinished forest scene. There's a lot of detail, but it's diff
     -> the_chimeras_options
 
 === the_chimeras_options ===
-* (Overall) [Lean in to scan the image.]
+* (A) [Lean in to scan the image.]
     You lean in and realize that the forest contains dozens of nude women <i>lounging</i> amongst creatures as if unaware of the impending danger. #InkGallery: Chimeras Overall
         ** [Zoom into the center.]
-        Your eyes dart toward the center where you spot a woman confidently riding on a winged chimera in complete control of her destiny. Her gusto rubs off on you{B: and, somehow, all the fear immediately exits your body}. #InkGallery: Chimeras Winged
+        Your eyes dart toward the center where you spot a woman confidently riding on a winged chimera in complete control of her destiny. Her gusto rubs off on you{B: and, somehow, all the fear immediately exits your body}.
         <- flyingBeasts
         ~fear--
-        Still feeling {dream}, but now {fear}, you decide to turn your attention elsewhere. 
+        Still feeling {dream}, but now {fear}, you decide to turn your attention elsewhere. #InkGallery: Chimeras Winged
 
         ** [Zoom into the bottom.]
-        Your eyes dart toward the bottom where you spot a few women dreamily staring off into the distance. Although a serpent creeps among them, they remain calm. #InkGallery: Chimeras Women
+        Your eyes dart toward the bottom where you spot a few women dreamily staring off into the distance. Although a serpent creeps among them, they remain calm.
         <- creepingBeasts
         ~fear--
         {
             - B:
-                Now feeling {fear} and {dream}, you decide to turn your attention elsewhere. 
+                Now feeling {fear} and {dream}, you decide to turn your attention elsewhere. #InkGallery: Chimeras Women
             - else:
-                Still feeling {fear}, but now {dream}, you decide to turn your attention elsewhere.
+                Still feeling {fear}, but now {dream}, you decide to turn your attention elsewhere. 
         }
-* (Unfinished) Why is it unfinished? #InkGallery: Chimeras Unfinished
+* (B) Why is it unfinished? #InkGallery: Chimeras Unfinished
     Moreau abandoned the work shortly after his mother's passing to work on a much darker piece that dipicts the fact that DEATH is coming for us all.
     ~fear++ // terrifiend as a state that will let the player flee the museum 
     -> the_chimeras_options
-+ ->->
++ Leave
+    ->->
 - ->->
 
  === fontaine ===
  ->->
 
  === oedipus ===
- Gustave Moreau's Oedipus and the Sphinx# InkGallery: Oedipus
+ Gustave Moreau's Oedipus and the Sphinx#InkGallery: Oedipus
  
  This painting captures the duel between Oedipus who has taken up the quest to kill the sphinx, but must first answer her riddle.
     ~themes += riddles
     
-    {themes ? death: This moment is balanced.}
+    {themes ? death: 
+    This moment is balanced.
+        +Leave
+        ->->
+    }
     
  -
  * Faces
     Oedipus has been asked his riddle and is obviously thinking very hard to figure out the answer.
-    Looking at the sphinx's eyes and posture you can tell that she's just waiting for him to screw up so that she can eat him.
+    Looking at the sphinx's eyes and posture you can tell that she's just waiting for him to screw up so that she can eat him. #InkGallery: Oedipus Faces
     <- devouringBeasts
     -> Plants ->
     
@@ -55,32 +60,53 @@ It's a large and unfinished forest scene. There's a lot of detail, but it's diff
     # InkGallery: Oedipus Bodies
     This didn't work out for everyone who came before.
     }
+    
+    ++Leave
+    ->->
  *(urn) What's that thing? the right foreground?
- # InkGallery: Oedipus Snake
+ 
+ # InkGallery: Oedipus Urn
     ~themes += death
     ** Butterfly?
     # InkGallery: Oedipus Butterfly
     In Greek myth butterflies are associated with the soul. A soul leaving an urn. Perhaps a little heavy handed. 
-    <- flyingBeasts
+        <- flyingBeasts
     
     ** (snake){not snek}A Snake?
     # InkGallery: Oedipus Snake
     {themes ? treeSnake: This little guy looks like he's climing a tree.}
+    Oh wow he's so little.
+    {Phaethon.snake: Between this and Phaethon's snake of death. I think I'm sensing a theme here.}
     ~themes += treeSnake
     <- creepingBeasts
-    
-    
+    ++Leave
+        ->->
+    --
+     ++Leave
+         ->->
  * (snek){not oedipus.snake}Snake!
     Look at this lad. Climbing up to that urn. Doing it's best.
+    # InkGallery: Oedipus Snake
+        <- creepingBeasts
     ~themes += treeSnake
-    <- creepingBeasts
-    -> urn
- - ->->
+
+    ** {not urn}Follow it up. . .
+        -> urn
+    ** {urn}Follow it up. . .
+     # InkGallery: Oedipus Urn
+     Oh, I get it. The stnake is but another face of death.
+     {Phaethon.snake: Between this and Phaethon's snake of death. I think I'm sensing a theme here.}
+    --
+
+    
+ - 
+ *Leave
+ ->->
  
  =Plants
- Will Moreau's Oedipus rise to the challenge and survice?
+ Will Moreau's Oedipus rise to the challenge and survive?
   {themes? safety:
- # InkGallery: Oedipus FigTree
+ # InkGallery: Oedipus BayTree
  The bay tree behind Oedipus suggests that he will hold to virtue and succeed in his goal.
  }
  {themes? temptation:
@@ -88,7 +114,12 @@ It's a large and unfinished forest scene. There's a lot of detail, but it's diff
  The fig tree, Christian symbol of temptation and sin would say otherwise.
  }
  ->->
+ ->->
  
  
+ === Phaethon === 
  
+ 
+ ->->
+ =snake
  ->->

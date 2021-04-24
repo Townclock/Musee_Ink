@@ -97,8 +97,9 @@
                 if( splitTag && splitTag.property == "InkGallery" ) {
                     var input = splitTag.val.split(" ");
                     console.log(input)
-                    if (input.length === 1) DisplayImage(input[0])
-                    if (input.length === 2) DisplayImage(input[0],input[1])
+                    if (input[0]==="Off") DisplayImage(false)
+                    else if (input.length === 1) DisplayImage(input[0])
+                    else if (input.length === 2) DisplayImage(input[0],input[1])
                 }
 
                 // IMAGE: src

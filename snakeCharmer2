@@ -3,14 +3,14 @@ You stand before Rousseau's Snake Charmer...
 
 Standing next to you is a little girl, holding the hand of her mother, as they gaze up at the painting. "Look, mommy...do you see the birds?" #InkGallery: SnakeCharmer
 - (top)
- * I see no birds. It's a painting of a woman. #InkGallery: SnakeCharmer
+ * I see no birds. It's a painting of a woman. #InkGallery: SnakeCharmer Eve
    Yes, but she's in a garden of Eden, a paradise. Surely, there are other creatures that fly. Where would birds be? You scan the painting again. 
         ** Search the night sky... -> sky
         ** Search the ground... ->ground
             Of course, I see the spoonbill. -> ground
         ** Look in the trees...
             -> all_birds
- * Could there be birds in the trees? #InkGallery: Trees
+ * Could there be birds in the trees? #InkGallery: SnakeCharmer Trees
     Ah, I see...the night owl peers through the darkness. It's eyes following me like prey.
         ~themes += prey
         **Could there be others?
@@ -24,7 +24,7 @@ Standing next to you is a little girl, holding the hand of her mother, as they g
             I keep looking. #InkGallery: SnakeCharmer
             -> top
  
- * (sky) I see the moon, pale and low in the sky, but I see no birds in flight. #InkGallery: Sky
+ * (sky) I see the moon, pale and low in the sky, but I see no birds in flight. #InkGallery: SnakeCharmer Sky
     ~themes += flight
     Only an owl may fly at night.
     ** Where would the owl be, if not in flight?
@@ -34,7 +34,7 @@ Standing next to you is a little girl, holding the hand of her mother, as they g
 
  * (trees) The trees are dark and deep, lovely.
     ~themes += paradise
-    **I see the owl, but where are the other birds? #InkGallery: Trees
+    **I see the owl, but where are the other birds? #InkGallery: SnakeCharmer Trees
     <- flyingBeasts
     ->all_birds
     **Ahh, I see them! The parrots...they look happy, content and safe. We have a bird on the ground, the spoonbill. There is the owl. And our love birds, the parrots.
@@ -44,15 +44,15 @@ Standing next to you is a little girl, holding the hand of her mother, as they g
 =some_birds
     You see the spoonbill, and the owl. Look closely...just to the left of the owl.
     **I see the parrots!
+    #InkGallery: SnakeCharmer Parrots
     ->all_birds
     
 -> wrapUp
 =all_birds 
-Look closely in the trees. There, you not only see the owl, who represents knowledge, but also a pair of parrots, who mate for life. #InkGallery: Trees
-** . . .
-** . . .
+Look closely in the trees. There, you not only see the owl, who represents knowledge, but also a pair of parrots, who mate for life. #InkGallery: SnakeCharmer Parrots
+    <- flyingBeasts
 -
-Am I like a mouse in the night? Or like the parrots, happily coupled? #InkGallery: Parrots
+Am I like a mouse in the night? Or like the parrots, happily coupled? #InkGallery: SnakeCharmer Parrots
 ~themes += paradise
 
 -> wrapUp

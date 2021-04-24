@@ -1,40 +1,86 @@
 
-=== surprise ===
-#InkGallery: Surprised
-#InkGallery: Tiger
-#InkGallery: Rain
-InkGallery: Foliage
+=== surprised ===
+You approach Roussea's <i>Surprised!</i> You see a tiger, illuminated by a flash of lightning, preparing to pounce on its prey in the midst of a raging gale.
+
+ * This tiger seems not like a tiger... #InkGallery: Surprised Tiger
+    Even though Roussea never visited the tropics, he meticulously created his jungle scenes by layering green upon green in every conceivable shade.
+        ** It's like an absinthe dream of a jungle -> imaginary_tiger
+        ** Absinthe...what's that like?
+            It's probably not the same today. -> absinthe
+ * What jungle could this be? #InkGallery: Surprised Foliage
+    It must be Mogul India. There was an obsession with India at the time. Even Delacroix painted tigers.
+        ~themes += mystery
+        **Do tigers kill people?
+            -> human
+        
+        ** (unreal)This is a bit too fantastical. I'm sure a Tiger wouldn't hunt in a torrential thunderstorm.
+            ~dream--
+            It must be a dream. #InkGallery: Surprised Rain
+            
+ 
+ * (imaginary_tiger) The tiger is floating and on the ground at the same time. How can that be?
+   The tiger's prey is beyond the edge of the canvas.
+    ** It's stalking a person! Is it me?
+    ~themes += prey
+    -> human
+    ** This is a bit too unreal.
+    -> unreal
+
+- 
+
+-> wrapUp
+=human
+Tigers who stalk humans are hunted down. #InkGallery: Surprised Tiger
+-
+->->
+=absinthe
+Roussea was no Bohemian. He exhibited in the Salon de Independent, maybe they drank absinthe, there when it was still legal.
+~themes += safety
+->wrapUp
+
+=wrapUp
 
 ->->
 
 === repast ===
-
 The Repast of the Lion
 
 {repast == 1:
+#InkGallery: Repast 
 You examine the painting:
 
 Lush greenery, colorful flowers, and a calm sunset all frame a lion – feasting on a leopard as he stares back at you.
 -> repast_options
 }
-{repast > 1: 
-#InkGallery: Repast Close-Up
-    *Leave 
-    -> leave
+{repast == 2: 
+#InkGallery: Repast 
+-> lion2
 }
+=lion2
+    -(lionLoop)
+    *Lion. . . 
+    #InkGallery: Repast Lion
+    <- devouringBeasts
+    -> lionLoop 
+    +Leave 
+    -> leave
+    -
+    ->->
+
+
 =leave
 ->->
 
 =repast_options
-+ (Greenery) Look closely at the greenery
++ (Greenery){Greenery < 3} [{~Look closely at the greenery|Get lost in the jungle|Grand shapes. . .}]
 {The vegetation is quite healthy, flawless in fact. You imagine the leaves swaying in a relaxing summer breeze.|The vegetation continues to sway in the breeze.|What else is there to see?} #InkGallery: Repast Greenery
 -> repast_options
-+ (Flowers) Look closely at the flowers
-{The flowers are bountiful and vibrant. They {Greenery:too } have a peaceful quality about them.|The flowers patiently wait for you to follow their direction.|What else is there to see?} #InkGallery: Repast Flowers
++ (Flowers){Flowers < 3} [{~Look closely at the flowers|Stop to smell the roses|Spots of brightness.}]
+{The flowers are bountiful and vibrant. They {Greenery:too} have a peaceful quality about them.|The flowers patiently wait for you to follow their direction.|What else is there to see?} #InkGallery: Repast Flowers
 -> repast_options
-+ (Sunset) Look closely at the sunset
++ (Sunset){Sunset < 3} [{~Look closely at the sunset.|The light melts your eyes.|I'm in daylight. . .}]
 {While this beast falls from the sky, another rises on land.|Soon it will be dark.|What else is there to see?} #InkGallery: Repast Sunset
-    <- creepingBeasts
+   
 -> repast_options
 * (Lion) {Greenery && Flowers && Sunset} Look closely at the lion
 Your gaze <i>finally</i> meets the lion's. "Has he been watching me this whole time?" you wonder. Blood oozes from his mouth as his stare remains unbroken. #InkGallery: Repast Lion
@@ -61,7 +107,7 @@ Your gaze <i>finally</i> meets the lion's. "Has he been watching me this whole t
 {snakecharmer == 2: -> snakeCharmer2 ->->}
  
     #InkGallery: SnakeCharmer
-    *leave ->->
+    +leave ->->
 }
 =Leave
 ->->

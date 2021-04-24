@@ -188,6 +188,7 @@ img {
 }
 
 #gallery {
+    opacity:0%;
     padding-bottom: 6px;
 	position: fixed;
     top: 50px;

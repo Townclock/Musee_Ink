@@ -5,15 +5,17 @@ let images =
                 "Trees" : {x: 820, y: 0, width: 1755, height: 900},
                 "Birds" : {x: 1420, y: 0, width: 1255, height: 750},
                 "Sky" : {x: 0, y: 0, width: 880, height: 945},
-                "Eve" : {x: 680, y: 930, width: 520, height: 1250},
-                "Parrots" : {x: 1800, y: 160, width: 240, height: 380},
+                "Eve" : {x: 795, y: 1052, width: 903, height: 1445},
+                "Parrots" : {x: 2375 , y: 160, width: 351, height: 401 },
+                "Snake" : {x: 1443 , y: 546, width: 1412, height: 931 },
+                "Snakes" : {x: 550 , y: 2131, width: 1331, height: 931 },
             },
             width: 3556,
             height:3147,
             source: "images/SnakeCharmer.jpg",
             img: document.createElement("IMG")
         },
-                "Surprise": {
+                "Surprised": {
             features : {
                 "Tiger" : {x: 0, y: 1200, width: 1700, height: 900},
                 "Rain" : {x: 1150, y: 0, width: 1840, height: 1220},
@@ -42,6 +44,10 @@ let images =
             features : {
                 "Urn" : {x: 471, y: 700, width: 179, height: 152},
                 "Snake" : {x: 494, y: 924, width: 159, height: 192},
+                "Butterfly" : {x: 569, y: 660, width: 81, height: 99},
+                "Faces" : {x: 204, y: 204, width: 350, height: 350},
+                "FigTree" : {x: 0, y: 887, width: 150, height: 238},
+                "BayTree" : {x: 430, y: 565, width: 195, height: 180},
             },
             width: 650,
             height:1293,
@@ -53,6 +59,9 @@ let images =
               "Unfinished" : {x: 257, y: 661, width: 611, height: 402},
               "Winged" : {x: 404, y: 537, width: 300, height: 300},
               "Women" : {x: 563, y: 1221, width: 547, height: 344},
+              "Wintry" : {x: 651, y: 964, width: 117 , height: 181},
+              "Choice" : {x: 837, y: 1063, width: 202, height: 205},
+              "Compromise" : {x: 0, y: 530, width: 147, height: 255},
             },
             width: 1449,
             height:1688,
@@ -76,12 +85,18 @@ let images =
 
 function DisplayImage(artName, featureName)
 {
+    if (!artName)
+    {
+        console.log(artName)
+        document.getElementById("gallery").style.opacity="0%"
+        return
+    }
     if (!images[artName])
     {
         alert("InkGallery :piece not defined " + artName);
         return
     }
-
+document.getElementById("gallery").style.opacity="100%"
     var canvas = document.getElementById("view");
 
     var ctx = canvas.getContext("2d");
@@ -107,7 +122,7 @@ function DisplayImage(artName, featureName)
             feature.width,
             feature.height,
             0,
-            (300-(300*ratio))/2,
+            (500-(300*ratio))/2,
             300,
             300*ratio
         );
@@ -123,7 +138,7 @@ function DisplayImage(artName, featureName)
             images[artName].width,
             images[artName].height,
             0,
-            (500 -300*ratio)/2,
+            (500-(300*ratio))/2,
             300,
             300*ratio
         );

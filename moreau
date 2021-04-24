@@ -1,6 +1,7 @@
 
 
 === moreau_stories ===
+#InkGallery: Off
 ~ currentLocation = moreau
 
   
@@ -38,12 +39,7 @@
  + {oedipus}Oedipus and the Sphinx
     ~time += 15
     -> oedipus ->
- * A figure in the clouds. . .
-    ~time += 15
-    -> fontaine ->
- +{fontaine}Fontaine's Fables
-    ~time += 15
-    -> fontaine ->
+
 - 
     -> moreau_stories
 

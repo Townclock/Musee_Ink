@@ -1,28 +1,25 @@
 === debug ===
+#InkGallery: Off
 +surprise
 #InkGallery: Surprised
--> surprise ->
+**DEBUGINNIG
+-> surprised ->
 +repast
-#InkGallery: Lion
 -> repast ->
 +snakecharmer
 #InkGallery: SnakeCharmer
 -> snakecharmer ->
 +oedipus
 #InkGallery: Oedipus
-++ urn
-    This is an urn # InkGallery: Oedipus Urn
-++ snake
-    This is an snake # InkGallery: Oedipus Snake
 
 -> oedipus ->
 +chimeras
 #InkGallery: Chimeras
 -> the_chimeras ->
-+fontaine
-#InkGallery: Fontaine
--> fontaine ->
-
++phaethon
+-> Phaethon ->
++wintry image test
+-> wintry.chimeras ->
 + LET ME PLAY
 -> museum_stories
 - -> debug

@@ -22,9 +22,9 @@ She finally turns towards her short platinum white hair flowing through the air.
 ~wintryName = "Sara"
 ~Wintry=photoAsked
 *"What! why?"
-    "I can't invent futures for paintings out of whole cloth. Look your face would be perfect right here." {wintryName} points to the painting. #Inkgallery Chimera Wintry
+    "I can't invent futures for paintings out of whole cloth. Look your face would be perfect right here." {wintryName} points to the painting. #InkGallery: Chimeras Wintry
 *"My face is nothing special."
-    "You have a gorgeous face. And I don't have to power to invent new faces just like that." {wintryName} points to the unfinished painting. "How would you like to be right here?"#Inkgaller Chimera Wintry
+    "You have a gorgeous face. And I don't have to power to invent new faces just like that." {wintryName} points to the unfinished painting. "How would you like to be right here?"#InkGallery: Chimeras Wintry
 *(model)"{chiMEra:Me. A Chimera? Wicked!} Why of course!"
     After all. It's not every day that you get to model{chiMEra: a monster}.
     "Thank you. Come back here after 2:30 and we'll make it snappy." {wintryName} mimes a camera. It's "hilarious". 
@@ -34,18 +34,29 @@ She finally turns towards her short platinum white hair flowing through the air.
 * (chiMEra)["Me. A Chimera? Wicked!"]
     -> model
 * "Why would I want to be a monster?"
-    {wintryName} laughs. "They're not monsters. They are the state of everyting. Don't you see?" She points at the paingting. "Do you see any violence in the piece?"
+    {wintryName} laughs. "They're not monsters. They are the state of everyting. Don't you see?" She points at the paingting. "Do you see any violence in the piece?" #InkGallery: Chimeras 
     "Here?"
+    **Ummm
+    #InkGallery: Chimeras Winged
+    --
     "Here?"
+    **Ehhh
+    #InkGallery: Chimeras Women
+    --
     "As the kids say, they are just vibing. We live in a time when it's okay for our lovers to be monsters." 
 * {inventory.image < 1} Am I really that ugly?
     "We all are passing through a metamorphosis. It is not what we appear to be, but who we are that counts. You are beautiful."
 * {inventory.image > 0} I am that ugly.
     "Stupid child. You are beautiful."
-* {inventory.image > 0} [What about the women.] "I would much rather be on of the women if that's possible." You point to one of the women sitting comfortably in the crowd." #Inkgaller Chimera Compromise
+* {inventory.image > 0} [What about the women.] "I would much rather be on of the women if that's possible." You point to one of the women sitting comfortably in the crowd." #InkGallery: Chimeras Choice
     ~WintryCompromise = true
-    {wintryName} bites her lip. "Well, I am not completely above compromise. . . It's a deal. Come talk to me after 2:30 and we'll put you in that place."
+    {wintryName} bites her lip. "Well, I am not completely above compromise. How about. . . there?"
+    **Look
+    She's human enough right? If it's a deal. Come talk to me after 2:30 and we'll put you in that place." #InkGallery: Chimeras Compromise
+    --
+    **Leave
     -> returnLocation
+    --
 - 
 "Have you ever the story of Tam Lin and Jannette?"
 "Tam Lin was captured by a fairy queen as a child, but it was through the dedication of Jannette that he was able self-actualized."
@@ -117,8 +128,13 @@ She steps away from the window and invites you to stand in the afternoon glow. O
     -> theGarden
 -> DONE
  = theGarden
+ {not WintryCompromise:
     You awaken yet again upon warm grass. The sun beats upon your {flyingBeasts>= devouringBeasts:feathered}{flyingBeasts < devouringBeasts:furred} back{flyingBeasts > 2: and wings}.
     You turn your head skyward stretching your {creepingBeasts==1: long}{creepingBeasts==2: very long}{creepingBeasts>2: damn-long} neck. {items?charm: Around your neck the wooden charm dangles so that you don't forget whou you are.}
+    - else:
+        #InkGallery: Chimeras Compromise
+        You stretch your wings and talons as you look upon the garden from your perch. All seems at piece here.
+    }
     Through the pixelated sky you can see out into a myriad of words. Some flash by in an instant.
     What came before?
     
