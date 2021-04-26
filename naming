@@ -1,6 +1,6 @@
 VAR Name = ""
 === NameInput ===
-    * {Name != ""} "Your name is {Name}."
+    + {Name != ""} "Your name is {Name}."
         ->->
     + [E, A]
         ++ [E]

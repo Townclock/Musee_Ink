@@ -69,12 +69,13 @@ From her jacket pocket Sara pulls out a small wooden disk. "Take this. It'll hel
      -> returnLocation
 
 =photography
-{wintryName} has already put away most of the equipment. She stands there alone by the window. The camera hangs around her neck. A sparkled of sunlight shines off of it and into your eyes.
+{wintryName} has already put away most of the equipment. She stands there alone by the window. The camera hangs around her neck. A sparkle of sunlight shines off of it and into your eyes.
     {snacks: She gestures to her cheek. "You have some food on your face." She giggles as you wipe it off.}
 
 * {tamithaLin == wintrySetup} "You sent me the ticket!"
 -> confrontation
-* {fear > unsettled} ["Why are you so damn scary!"]"Why are you so damn scary!" you scream doesn't seem to catch her off guard. {~fear++} You stand there staring until your will breaks and you flee into the foyer.
+* {fear > unsettled} ["Why are you so damn scary!"]"Why are you so damn scary!" you scream doesn't seem to catch her off guard. You stand there staring until your will breaks and you flee into the foyer.
+    ~fear++
     ~currentLocation = foyer
     ~returnLocation = ->foyer_stories
     ->foyer_stories

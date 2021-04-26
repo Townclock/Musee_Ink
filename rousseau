@@ -3,6 +3,8 @@
 <- rousseau_paintings
 <- travel_actions
 <- inventory 
+- -> DONE
+
 
 -> rousseau_stories
 
@@ -27,5 +29,6 @@
     ~time += 15
     -> surprised ->
 - 
+    -> rousseau_stories
 
 -> DONE

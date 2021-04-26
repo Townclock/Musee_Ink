@@ -1,5 +1,6 @@
 
 === surprised ===
+#InkGallery: Surprised
 You approach Roussea's <i>Surprised!</i> You see a tiger, illuminated by a flash of lightning, preparing to pounce on its prey in the midst of a raging gale.
 
  * This tiger seems not like a tiger... #InkGallery: Surprised Tiger
@@ -39,7 +40,9 @@ Roussea was no Bohemian. He exhibited in the Salon de Independent, maybe they dr
 ->wrapUp
 
 =wrapUp
-
+#InkGallery: Surprised
+++Leave
+--
 ->->
 
 === repast ===

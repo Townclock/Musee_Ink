@@ -48,6 +48,7 @@ let images =
                 "Faces" : {x: 204, y: 204, width: 350, height: 350},
                 "FigTree" : {x: 0, y: 887, width: 150, height: 238},
                 "BayTree" : {x: 430, y: 565, width: 195, height: 180},
+                "Bodies" : {x: 266, y: 1086, width: 356, height: 207},
             },
             width: 650,
             height:1293,
@@ -89,6 +90,8 @@ function DisplayImage(artName, featureName)
     {
         console.log(artName)
         document.getElementById("gallery").style.opacity="0%"
+        
+        document.getElementById("gallery").style.display="none"
         return
     }
     if (!images[artName])
@@ -96,7 +99,8 @@ function DisplayImage(artName, featureName)
         alert("InkGallery :piece not defined " + artName);
         return
     }
-document.getElementById("gallery").style.opacity="100%"
+    document.getElementById("gallery").style.opacity="100%"
+    document.getElementById("gallery").style.display="block"
     var canvas = document.getElementById("view");
 
     var ctx = canvas.getContext("2d");

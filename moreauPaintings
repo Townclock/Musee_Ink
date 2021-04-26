@@ -35,11 +35,16 @@ It's a large and unfinished forest scene. There's a lot of detail, but it's diff
     -> the_chimeras_options
 + Leave
     ->->
+- 
++ Leave
+    
 - ->->
 
  === fontaine ===
  ->->
 
+
+//missing bodies
  === oedipus ===
  Gustave Moreau's Oedipus and the Sphinx#InkGallery: Oedipus
  
@@ -67,7 +72,7 @@ It's a large and unfinished forest scene. There's a lot of detail, but it's diff
     ++Leave
     ->->
  *(urn) What's that thing? the right foreground?
- 
+ This is a urn. Huh, I wonder what this symbolizes. . .
  # InkGallery: Oedipus Urn
     ~themes += death
     ** Butterfly?
@@ -121,7 +126,8 @@ It's a large and unfinished forest scene. There's a lot of detail, but it's diff
  
  
  === Phaethon === 
-  ->->
+ 
+ 
+ ->->
  =snake
  ->->
-

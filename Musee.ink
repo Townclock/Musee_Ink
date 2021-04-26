@@ -57,8 +57,12 @@ VAR returnLocation = -> foyer_stories
 // State Machines and vars for "quest" progress
 
 
++Play
+-> museum_stories
++Debug
 -> debug
-
+- 
+-> END
  
  
  
