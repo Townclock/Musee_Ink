@@ -12,6 +12,7 @@ You approach Roussea's <i>Surprised!</i> You see a tiger, {illuminated by a flas
         ** It's like an absinthe dream of a jungle -> imaginary_tiger
         ** Absinthe...what's that like?
             It's probably not the same today. -> absinthe
+        --
  * What jungle could this be? #InkGallery: Surprised Foliage
     It must be Mogul India. There was an obsession with India at the time. Even Delacroix painted tigers.
         ~themes += mystery
@@ -22,7 +23,7 @@ You approach Roussea's <i>Surprised!</i> You see a tiger, {illuminated by a flas
             ~dream--
             It must be a dream. #InkGallery: Surprised Rain
             
- 
+        --
  * (imaginary_tiger) The tiger is floating and on the ground at the same time. How can that be?
    The tiger's prey is beyond the edge of the canvas.
     ** It's stalking a person! Is it me?
@@ -30,10 +31,9 @@ You approach Roussea's <i>Surprised!</i> You see a tiger, {illuminated by a flas
     -> human
     ** This is a bit too unreal.
     -> unreal
++ Leave ->->
 
-- 
-
--> wrapUp
+- -> wrapUp
 =human
 Tigers who stalk humans are hunted down. #InkGallery: Surprised Tiger
 -
