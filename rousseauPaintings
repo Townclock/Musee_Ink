@@ -1,10 +1,14 @@
 
 === surprised ===
 #InkGallery: Surprised
-You approach Roussea's <i>Surprised!</i> You see a tiger, illuminated by a flash of lightning, preparing to pounce on its prey in the midst of a raging gale.
+You approach Roussea's <i>Surprised!</i> You see a tiger, {illuminated by a flash of lightning|in the midst of a raging gale}{themes ? prey:, preparing to pounce on its prey}.
 
  * This tiger seems not like a tiger... #InkGallery: Surprised Tiger
-    Even though Roussea never visited the tropics, he meticulously created his jungle scenes by layering green upon green in every conceivable shade.
+    Even though Roussea never visited the tropics, he meticulously created his {themes ? paradise:
+            Eden
+        -else:
+            jungle
+        } scenes by layering green upon green in every conceivable shade.
         ** It's like an absinthe dream of a jungle -> imaginary_tiger
         ** Absinthe...what's that like?
             It's probably not the same today. -> absinthe
@@ -14,7 +18,7 @@ You approach Roussea's <i>Surprised!</i> You see a tiger, illuminated by a flash
         **Do tigers kill people?
             -> human
         
-        ** (unreal)This is a bit too fantastical. I'm sure a Tiger wouldn't hunt in a torrential thunderstorm.
+        ** (unreal)This is a bit too fantastical. I'm sure a Tiger wouldn't hunt in a torrential thunderstorm{repast: unlike that creepy{repast.Lion2: standing} lion from the other painting.}.
             ~dream--
             It must be a dream. #InkGallery: Surprised Rain
             
@@ -87,6 +91,12 @@ Lush greenery, colorful flowers, and a calm sunset all frame a lion – feasting
 -> repast_options
 * (Lion) {Greenery && Flowers && Sunset} Look closely at the lion
 Your gaze <i>finally</i> meets the lion's. "Has he been watching me this whole time?" you wonder. Blood oozes from his mouth as his stare remains unbroken. #InkGallery: Repast Lion
+    <- devouringBeasts
+    { fear <= terrified:
+	    ~fear++
+    }
+->repast_leave
+* (Lion2){Greenery && Flowers && Sunset && dream > grounded} The lion is standing amidst a field of flat grass which betrays normal perspecive. It's like a sasquatch eating a bloody otterpop..  #InkGallery: Repast Lion
     <- devouringBeasts
     { fear <= terrified:
 	    ~fear++

@@ -15,24 +15,20 @@ It's a large and unfinished forest scene. There's a lot of detail, but it's diff
         Your eyes dart toward the center where you spot a woman confidently riding on a winged chimera in complete control of her destiny. Her gusto rubs off on you{Unfinished: and, somehow, all the fear immediately exits your body}. #InkGallery: Chimeras Winged
         <- flyingBeasts
         ~fear--
-        Still feeling {dream}, but now {fear}, you decide to turn your attention elsewhere. #InkGallery: Chimeras Winged
+        You decide to turn your attention elsewhere. #InkGallery: Chimeras Winged
 
         ** [Zoom into the bottom.]
         Your eyes dart toward the bottom where you spot a few women dreamily staring off into the distance. Although a serpent creeps among them, they remain calm.
         <- creepingBeasts
         ~fear--
-        {
+        You decide to turn your attention elsewhere. 
 
-            - Unfinished:
-                Now feeling {fear} and {dream}, you decide to turn your attention elsewhere. 
-
-            - else:
-                Still feeling {fear}, but now {dream}, you decide to turn your attention elsewhere. 
-        }
-* (B) Why is it unfinished? #InkGallery: Chimeras Unfinished
+        
+* (Unfinished) Why is it unfinished? #InkGallery: Chimeras Unfinished
     Moreau abandoned the work shortly after his mother's passing to work on a much darker piece that dipicts the fact that DEATH is coming for us all.
     ~fear++ // terrifiend as a state that will let the player flee the museum 
     -> the_chimeras_options
+* {themes ? paradise} Was it a paradise or a hell that Moreau intended? 
 + Leave
     ->->
 - 

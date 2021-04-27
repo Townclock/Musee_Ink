@@ -45,17 +45,18 @@ VAR cardFound = false
     { items ? riddleCard:
     Oh, it looks like there is something on the back.
     ~cardFound = true
+    -> riddle
     - else: 
-    This coupon doesn't appear to be worth much. It probably isn't worth holding on to.
+    This coupon doesn't appear to be worth much. It probably isn't worth keeping.
     }
     ~items += coupon
 -> manage
-+ {cardFound}Riddle
++ (riddle){cardFound}Riddle
     {Loki < recievedRiddle: 
     ~Loki = recievedRiddle
     }
     On the back of the coupon in elegant hand writing follows:
-    How would you like to enjoy a Low-Key riddle? Upon these walls hangs the aspects of my four children. From them, divine thusly: Who am I?
+    How would you like to enjoy a <i>Low-Key</i> riddle? Upon these walls hangs the aspects of my four children. From them, divine thusly: Who am I?
 -> manage
 + (pennies){items ? pocketMoney}Cash
     A couple of euros of spending money.

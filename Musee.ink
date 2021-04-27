@@ -15,6 +15,8 @@ INCLUDE naming
 INCLUDE WintryLady
 INCLUDE snakeCharmer1
 INCLUDE snakeCharmer2
+INCLUDE randomEvents
+
 
 
 

@@ -10,24 +10,28 @@
  -> foyer_stories
  
 + {CanTravel(moreau)} [Gustave Moreau Collection]
+ <-randomEncounter
 
   ~currentLocation = moreau
 ~returnLocation = ->moreau_stories
   ->moreau_stories
   
 + {CanTravel(rousseau)} [Henri Rousseau Collection]
+ <-randomEncounter
   Gallery One is a favourite. The post-impressionist Rousseau's "La Charmeuse de Serpents" dominates the room. Toulouse-Lautrec's Moulin Rouge works occupy and brighten the far corner. A small crowd gathers to ponder the black Eve in her garden of Eden.
   ~currentLocation = rousseau
 ~returnLocation = ->rousseau_stories
   -> rousseau_stories
   
  + {CanTravel(foyer) && foyer_stories} [Return to the Foyer]
+ <-randomEncounter
   People are excited that the museum has reopened...
   ~currentLocation = foyer
 ~returnLocation = ->foyer_stories
   -> foyer_stories
 
  + {CanTravel(cafeteria)} [Cafeteria]
+ <-randomEncounter
 
   ~currentLocation = cafeteria
 ~returnLocation = ->cafeteria_stories
