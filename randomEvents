@@ -1,0 +1,19 @@
+=== randomEncounter ===
+{themes ? riddles and not eMystery: ->eMystery->DONE}
+{themes ? death and not eDeath: ->eDeath->DONE}
+{flight: ->eFlight->DONE}
+{themes ? prey and not ePrey:->ePrey->DONE}
+->->
+=eMystery
+Walking to your destination you see a formally dressed man standing in a corner. Upon closer inspection he appears to be missing a shoe. You catch him staring at you.{repast: His otherwise perfectly white shirt is stained with what must have been tomato sauce under his chin.}
+->->
+=eDeath
+   A gaggle of goth kids bickering in English get in your way. Must have gotten lost on their way to the catacombs. You can see skulls in their faces.
+   ->->
+=eFlight
+    The gallery grows suddenly darker. Looking up, you notice that the skylight to the gallery has been covered by an entire flock of pidgeons. {dream > grounded: It feels like you are looking up from the underworld.}
+    The pidgeons fly out of view.
+    ->->
+=ePrey
+    As you move through the gallery you see a small white mouse conspiratorially peeking over the top of one of the paintings. It is staring at me? 
+    ->->
